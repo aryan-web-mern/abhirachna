@@ -5,7 +5,7 @@ import { useAuth } from "./AuthProvider/AuthContext";
 import Login from "./components/login/Login";
 import Loader from "./components/common/Loader/GlobalLoader";
 import { useLoading } from "./context/LoaderContext/LoaderContext";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { setupAxiosInterceptors } from "./api/axios";
 import { useLocation } from "react-router-dom";
 
@@ -14,6 +14,8 @@ function App() {
   const { isLoading, setIsLoading } = useLoading();
 
   const { pathname } = useLocation();
+  const pathnameRef = useRef(pathname);
+  pathnameRef.current = pathname;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -41,9 +43,8 @@ function App() {
     };
   }, [pathname]);
 
-  // user profile updates by gurinder
   useEffect(() => {
-    setupAxiosInterceptors(setIsLoading, pathname);
+    setupAxiosInterceptors(setIsLoading, () => pathnameRef.current);
   }, [setIsLoading]);
   return (
     <>
