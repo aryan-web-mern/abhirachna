@@ -1,0 +1,487 @@
+.processMainContainer {
+  padding: 9.375rem 2.5rem 2.5rem 2.5rem;
+
+  width: 100%;
+  /* place-self: center; */
+  /* height: 990px; */
+  display: flex;
+  justify-content: center;
+  background-color: var(--text-white-100);
+}
+
+.processContainer {
+  background-color: var(--primary-bg);
+  border-radius: 1.875rem;
+  padding: 0rem 2.5rem;
+  /* max-width: 90rem; */
+  width: 85rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: auto;
+}
+
+.imageContainer {
+  height: 50rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.imageTrack {
+  height: 50rem;
+  min-width: 25.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 18.75rem;
+  padding-bottom: 21.875rem;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+  overflow-x: visible;
+  overflow-y: scroll;
+  /* scroll-snap-type: y mandatory; */
+  scroll-behavior: smooth;
+}
+
+.scrollImage {
+  width: 21.25rem;
+  height: 14.1875rem;
+  scroll-snap-align: center;
+  transition: all 0.4s ease-out;
+  border-radius: 0.75rem;
+  /* overflow: hidden; */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.scrollImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scrollImage.active {
+  width: 25.625rem;
+  height: 17.0625rem;
+}
+
+.imageTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.imageTrack {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  gap: 0.75rem;
+  max-width: 22.5rem;
+  color: var(--text-white-100);
+  opacity: 0;
+}
+
+.processHeading {
+  top: 5rem;
+  right: 4.1875rem;
+  position: absolute;
+  color: var(--red-normal);
+  font-weight: 400;
+  font-size: 3.375rem;
+  line-height: 3.75rem;
+}
+
+.textContainer p {
+  color: var(--link-color);
+}
+
+.textContainer.visible {
+  display: flex;
+}
+
+.pathContainer {
+  position: relative;
+  min-width: 18.75rem;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.path {
+  max-height: 790px;
+  scale: 1.02;
+  pointer-events: none;
+}
+
+.dotContainer {
+  position: relative;
+}
+
+.dotContainer .ringsDot {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.8s;
+}
+.dot0,
+.dot1,
+.dot2,
+.dot3,
+.dot4 {
+  position: absolute;
+  transition: all 0.7s ease;
+}
+
+.dot0 {
+  top: -30%;
+  right: 80%;
+  opacity: 0 !important;
+}
+.dot4 {
+  top: 111%;
+  right: -50%;
+  opacity: 0 !important;
+}
+
+.dot1 {
+  top: 1%;
+  right: 66.5%;
+  width: 4.8125rem;
+  height: 4.8125rem;
+}
+.dot2 {
+  top: 48%;
+  right: 11%;
+}
+
+.dot2 .ringsDot {
+  height: 112px;
+  width: 112px;
+  top: 49%;
+}
+.dot3 {
+  top: 72.5%;
+  right: 74%;
+}
+
+@media (max-width: 76.25rem) and (min-width: 64rem) {
+  .dot0,
+  .dot1,
+  .dot2,
+  .dot3,
+  .dot4 {
+    width: 3.4375rem;
+    height: 3.4375rem;
+  }
+  .dot0 {
+    right: 80%;
+  }
+  .dot1 {
+    right: 73%;
+  }
+  .dot2 {
+    top: 47.5%;
+    right: 14%;
+  }
+  .dot1 .ringsDot,
+  .dot3 .ringsDot {
+    top: 40px;
+    left: 40px;
+  }
+
+  .dot2 .ringsDot {
+    top: 40px;
+    left: 40px;
+  }
+  .dot3 {
+    top: 72.5%;
+    right: 81%;
+  }
+  .dot4 {
+    top: 111%;
+    right: -50%;
+  }
+}
+
+@media (max-width: 66.875rem) {
+  .processMainContainer {
+    padding: 5rem 2.5rem 5rem 2.5rem;
+  }
+  .processContainer {
+    padding: 0rem;
+  }
+
+  .processHeading {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.625rem;
+    letter-spacing: 0.04rem;
+  }
+  .textContainer {
+    max-width: 18.75rem;
+    margin-right: 1.875rem;
+  }
+
+  .textContainer h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 0.025rem;
+  }
+
+  .textContainer p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625rem;
+    letter-spacing: 0.02rem;
+  }
+  .imageContainer {
+    display: none;
+  }
+  .path {
+    scale: 1.08;
+  }
+  .path path {
+    stroke-width: 2;
+  }
+  .dot0,
+  .dot1,
+  .dot2,
+  .dot3,
+  .dot4 {
+    width: 3.4375rem;
+    height: 3.4375rem;
+  }
+  .dot0 {
+    right: 95%;
+  }
+  .dot1 {
+    right: 73%;
+  }
+
+  .dot2 {
+    right: 17%;
+    top: 48.5%;
+  }
+  .dot2 .ringsDot {
+    /* display: none; */
+    top: 40px;
+    left: 40px;
+  }
+  .dot3 {
+    top: 74.5%;
+    right: 83%;
+  }
+  .dot4 {
+    top: 113%;
+    right: -37%;
+  }
+  .dot1 .ringsDot,
+  .dot3 .ringsDot {
+    top: 40px;
+    left: 40px;
+  }
+
+  .imageContainer {
+    max-height: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    /* hh */
+    position: absolute;
+    max-width: 18.75rem;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    bottom: 6.875rem;
+    right: 0.625rem;
+  }
+
+  .imageTrack {
+    height: 10.8125rem;
+    overflow-y: hidden;
+    min-width: 0;
+    /* jj */
+    padding-top: 0;
+    padding-bottom: 0;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    overflow-x: scroll;
+  }
+
+  .scrollImage {
+    min-width: 12.5rem;
+    max-height: 8.3125rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  }
+
+  .scrollImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .scrollImage.active {
+    min-width: 16.25rem;
+    max-height: 10.8125rem;
+  }
+}
+@media (max-width: 46.875rem) and (min-width: 36.875rem) {
+  .dot0 {
+    right: 96%;
+  }
+  .dot1 {
+    right: 73%;
+  }
+  .dot2 {
+    right: 16%;
+    top: 48%;
+  }
+  .dot3 {
+    top: 74.5%;
+    right: 83%;
+  }
+  .dot4 {
+    top: 113%;
+    right: -45%;
+  }
+}
+@media (max-width: 46.875rem) {
+  .processContainer {
+    gap: 0.625rem;
+  }
+}
+
+@media (max-width: 36.875rem) {
+  .processMainContainer {
+    padding: 3.75rem 1rem 3.75rem 1rem;
+  }
+  .processContainer {
+    max-height: 43.75rem;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  .imageTrack {
+    height: 6.875rem;
+  }
+
+  .imageContainer {
+    max-width: 12.5rem;
+  }
+  .processHeading {
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 0.025rem;
+  }
+  .textSection {
+    display: flex;
+    height: 60%;
+    align-items: start;
+    justify-content: center;
+  }
+  .textContainer {
+    position: absolute;
+    top: 7.5rem;
+    right: 0.625rem;
+    max-width: 10.625rem;
+    margin-right: 0;
+  }
+
+  .textContainer h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.02rem;
+  }
+
+  .textContainer p {
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.125rem;
+    letter-spacing: 0.015rem;
+  }
+  .pathContainer {
+    min-width: 11.25rem;
+    margin-left: 1.875rem;
+  }
+  .path {
+    scale: 1;
+    width: 17.1875rem;
+  }
+  .path path {
+    transform: translateX(-1.875rem);
+  }
+
+  .dot0,
+  .dot1,
+  .dot2,
+  .dot3,
+  .dot4 {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .smallDot {
+    width: 40px;
+  }
+
+  .dot0 {
+    right: 105%;
+  }
+  .dot1 {
+    top: 10%;
+    right: 80%;
+  }
+  .dot2 {
+    right: 26.5%;
+    top: 49.5%;
+  }
+
+  .dot2 .ringsDot {
+    height: 50px;
+    width: 50px;
+  }
+  .dot1 .ringsDot,
+  .dot2 .ringsDot,
+  .dot3 .ringsDot {
+    top: 50%;
+    left: 50%;
+  }
+  .dot3 {
+    top: 70.5%;
+    right: 87.5%;
+  }
+  .dot4 {
+    top: 113%;
+    right: -58%;
+  }
+
+  .scrollImage {
+    min-width: 8.125rem;
+    max-height: 5.4375rem;
+    overflow: hidden;
+  }
+
+  .scrollImage.active {
+    min-width: 9.8125rem;
+    max-height: 6.5rem;
+  }
+}
+
+@media (max-width: 28.125rem) {
+  .pathContainer {
+    margin-left: 0rem;
+  }
+}

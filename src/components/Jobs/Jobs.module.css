@@ -1,0 +1,368 @@
+/* y\table csss */
+
+.jobTable {
+  width: 100%;
+  /* height: 46.25rem; */
+  border-collapse: collapse;
+  /* margin-top: -33rem; */
+}
+
+.jobTable thead {
+  font-size: 1.125rem;
+  /* 18px */
+  background-color: var(--text-flame-50);
+  font-weight: 400;
+  color: #333;
+}
+
+.jobTable thead th {
+  position: sticky;
+  width: 12.313rem;
+  top: 0;
+  background: var(--text-flame-50);
+  z-index: 2;
+  color: var(--text-black-100);
+}
+
+.jobTable tbody {
+  overflow-y: auto;
+}
+
+.jobTable tbody tr {
+  border-bottom: 1px solid #e0d6d0;
+  height: 3.25rem;
+}
+/* .bigScreenJobListing {
+  min-height: 79vh;
+} */
+
+.bigScreenJobListing::-webkit-scrollbar {
+  display: none;
+}
+
+/* Scrollbar styles: applied globally */
+:global(::-webkit-scrollbar) {
+  width: 0.3125rem;
+  /* 5px */
+  height: 0.125rem;
+  width: 0.25rem !important;
+  /* 2px */
+}
+
+:global(::-webkit-scrollbar-track) {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 0.625rem;
+  /* 10px */
+}
+
+:global(::-webkit-scrollbar-thumb) {
+  background: var(--red-normal);
+  border-radius: 0.625rem;
+}
+
+:global(::-webkit-scrollbar-thumb:hover) {
+  background: var(--red-normal-hover);
+}
+
+@media (max-width: 768px) {
+}
+
+/* table css over */
+
+.jobsmainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 2.5rem;
+}
+
+.jobRow {
+  align-items: center;
+  padding: 1rem 1.5rem;
+  /* 16px 24px */
+  background-color: var(--text-flame-50);
+  border-bottom: 1px solid #e0d6d0;
+  font-size: 0.875rem;
+  /* 14px */
+}
+
+.jobRow:last-child {
+  border-bottom: none;
+}
+
+.jobRoll {
+  text-align: left;
+  width: 30rem !important;
+}
+
+.jobId,
+.experience {
+  text-align: left;
+  width: 19.0625rem;
+  /* 305px */
+  height: 1.75rem;
+  /* 28px */
+  overflow-wrap: break-word;
+  color: var(--text-black-600) !important;
+}
+
+.actions {
+  text-align: right;
+}
+
+.dColor {
+  color: var(--text-black-600);
+}
+
+/* Buttons */
+.viewBtn,
+.applyBtn {
+  height: min-content;
+  min-width: 100%;
+  /* 161px */
+  /* height: 3rem; */
+  /* 48px */
+  font-size: 1rem;
+  /* 13px */
+  font-weight: 400;
+  border-radius: 1.5rem;
+  /* 20px */
+  /* 6px 16px */
+  cursor: pointer;
+  letter-spacing: 2%;
+  /* 8px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 48px;
+}
+
+.viewBtnMain,
+.applyBtnMain {
+  padding: 0px 30px !important;
+}
+.viewBtn {
+  background: transparent;
+  border: 1px solid var(--red-normal);
+  color: var(--red-normal);
+}
+
+.viewBtn:hover {
+  background: var(--red-normal-hover);
+  color: #fff;
+}
+
+.applyBtn {
+  background: var(--red-normal);
+  border: 1px solid var(--red-normal);
+  color: var(--text-white-100);
+}
+
+.applyBtn:hover {
+  background: var(--red-normal-hover);
+}
+
+.navContainer .navLeft,
+.navRight {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 40px;
+}
+
+.searchIcon {
+  margin-top: -42px;
+  margin-left: -35rem;
+  justify-self: anchor-center;
+}
+
+.navContainer {
+  margin: 0 auto;
+  position: relative;
+  margin-top: 10rem !important;
+  margin-top: 0px;
+  place-self: center;
+  display: flex;
+  align-items: center;
+  max-width: 1360px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fef4ee;
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 30px;
+  max-height: 5.125rem;
+}
+
+.navTitle {
+  font-family: "Poppins";
+  line-height: 125%;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+/* Table */
+.jobTableContainer {
+  margin: 0 auto;
+  margin-bottom: 6.25rem;
+
+  margin-top: 1.25rem;
+  /* 20px */
+  position: relative;
+  max-width: 1360px;
+  width: 100%;
+  /* 1320px */
+  border-collapse: collapse;
+  background: var(--text-flame-50);
+  border-radius: 1.875rem;
+  /* 20px */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 78vh;
+  /* 740px */
+  overflow-y: auto;
+  overflow-x: auto;
+  max-height: 78vh;
+}
+
+.jobTableContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.jobTable tbody td {
+  border-bottom: 1px solid var(--text-white-100);
+  color: var(--text-black-100);
+  height: 3.25rem;
+}
+
+.jobTable th,
+.jobTable td {
+  max-width: 5.8125rem;
+  /* 93px */
+  padding: 20px 40px;
+  /* 16px 24px */
+  text-align: left;
+  vertical-align: middle;
+}
+
+.jobTableHeader .jobRoll {
+  text-align: left;
+}
+
+.jobTableHeader .jobId,
+.jobTableHeader .experience {
+  width: 19.0625rem;
+  /* 305px */
+  height: 1.75rem;
+  /* 28px */
+}
+
+.jobTable::-webkit-scrollbar {
+  display: none;
+}
+
+/* Search & Filter */
+.searchInput {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.jobSearchInput {
+  position: absolute;
+  padding: 1.5625rem;
+  /* 25px */
+  cursor: pointer;
+}
+
+.filterSelected {
+  background-color: var(--text-flame-400);
+}
+
+.smallScreenJobListing {
+  display: none;
+}
+
+.noJobsBox {
+  min-height: 78vh;
+  width: 100%;
+  /* border: 1px solid; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-black-600);
+}
+
+@media screen and (max-width: 1024px) {
+  .navTitle,
+  .applyBtnMain {
+    display: none;
+  }
+
+  .viewBtn {
+    height: min-content;
+  }
+
+  thead h4 {
+    font-size: 1.25rem !important;
+    line-height: 2rem;
+    font-weight: 500;
+    letter-spacing: 2%;
+  }
+
+  .jobTable th,
+  .jobTable td {
+    padding: 1rem 17px;
+  }
+
+  .jobId {
+    /* color: var(--text-black-600) !important; */
+  }
+
+  .container {
+    width: 100% !important;
+    max-width: 28rem !important;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .jobTableContainer {
+    padding: 0.75rem;
+  }
+
+  .navContainer {
+    padding: 7px;
+  }
+  .searchInput {
+    width: 60%;
+  }
+
+  .smallScreenJobListing {
+    display: contents;
+    background-color: var(--text-flame-50);
+    /* min-height: 79vh; */
+    display: flex;
+    flex-direction: column;
+    /* 358px */
+    /* 12px */
+    gap: 0.75rem;
+    /* 12px */
+    border-radius: 1rem;
+    /* 16px */
+    box-sizing: border-box;
+  }
+
+  .bigScreenJobListing {
+    display: none;
+  }
+}
+
+@media (max-width: 590px) {
+  .jobsmainContainer {
+    padding: 0rem 16px;
+  }
+  .jobTableContainer {
+    border-radius: 16px;
+    margin-top: 12px;
+  }
+}

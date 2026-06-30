@@ -1,0 +1,236 @@
+.mainContainer {
+  padding: 150px 40px 0px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  /* place-self: center; */
+  width: 85rem; /* 1360px */
+  height: 48.6875rem; /* 779px  */
+
+  border-radius: 2rem; /* 32px */
+  background-color: var(--text-flame-50);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.textContainer {
+  position: absolute;
+  top: 12.0938rem;
+  left: 2.5rem; /* 40px */
+  width: 25.625rem; /* 410px */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2.5rem; /* 40px */
+}
+
+.textContainer .text {
+  height: 18.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
+}
+
+.textContainer div p {
+  color: var(--text-black-600);
+}
+
+.sliderContainer {
+  /* border: 1px solid black; */
+  width: 738px;
+  height: 100%;
+  overflow-y: hidden;
+  left: 582px;
+  position: absolute;
+  /* place-self: center; */
+}
+
+.cardsBox {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  position: relative;
+  top: -210px;
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    width: 100%;
+    /* flex-direction: column; */
+  }
+
+  .textContainer {
+    position: relative;
+    gap: 80px;
+  }
+
+  .sliderContainer {
+    position: static;
+    overflow: hidden;
+  }
+
+  .cardsBox{
+    right: -15px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+
+  .mainContainer{
+    /* height: 1238px; */
+    padding: 80px 40px;
+  }
+
+  .container {
+    border-radius: 30px;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    height: 890px;
+    /* padding: 40px; */
+    /* padding: 40px; */
+  }
+
+  .sliderContainer {
+    width: 100%;
+    height: 100%;
+  }
+
+  .textContainer {
+    gap: 40px;
+    left: 0;
+    top: 0;
+    padding-top: 40px;
+    align-items: center;
+    height: 180px;
+    width: 100%;
+  }
+
+  .textContainer .text {
+    height: fit-content;
+    width: 554px;
+  }
+
+  .textContainer .text h3 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.48px;
+  }
+
+  .textContainer div p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.32px;
+  }
+
+  .sliderContainer{
+    margin-top: 95px;
+    /* border: 1px solid; */
+  }
+  
+  .cardsBox {
+    gap: 60px;
+    top: -170px;
+    right: 0;
+    /* top: 95px; */
+    /* display: none; */
+    /* border: 1px solid; */
+  }
+
+}
+
+@media screen and (max-width: 767px){
+  .container{
+    padding: 20px;
+  }
+
+  .textContainer div p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 2%;
+  }
+
+  .textContainer .text {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 590px) {
+  .mainContainer {
+    padding: 60px 16px 0px 16px;
+    min-height: 100vh;
+    /* width: 100%; */
+    overflow: hidden;
+  }
+  
+  .container {
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 16px;
+    height: 756px;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+
+  .sliderContainer {
+    width: 100%;
+  }
+
+  .textContainer {
+    gap: 40px;
+    left: 0;
+    top: 0;
+    padding-top: 40px;
+    align-items: center;
+    height: 180px;
+    width: 100%;
+  }
+
+  .textContainer .text {
+    height: fit-content;
+  }
+
+  .textContainer .text h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+  }
+
+  .textContainer div p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.24px;
+    display: none;
+  }
+
+  .sliderContainer{
+    margin-top: 0px;
+    /* border: 1px solid; */
+  }
+
+  .cardsBox {
+    /* border: 3px solid; */
+    gap: 30px;
+    top: -175px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .cardsBox {
+    top: -175px;
+    gap: 30px;
+  }
+}

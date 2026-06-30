@@ -1,0 +1,143 @@
+.mainContainer {
+  position: relative;
+}
+
+.textAreaContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 10rem;
+  /* min-height: 4rem;
+  width: 39.625rem; */
+  height: 200px;
+  background-color: var(--text-white-100);
+  border-radius: 1.25rem;
+  border: 0.6px solid var(--text-flame-200);
+  /* position: relative; */
+}
+
+.textAreaContainer:focus-within {
+  border: 0.0625rem solid var(--text-flame-300);
+}
+
+.haveValue {
+  border: 0.6px solid var(--text-black-500);
+}
+
+.errorBorder {
+  border: 0.6px solid var(--error-red);
+}
+
+.textWrapper .textareabox {
+  position: absolute;
+  top: 20px;
+  /* border: 1px solid; */
+  height: 85%;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+}
+
+.textArea {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  outline: none;
+  border: none;
+  margin-left: 1rem;
+  background-color: transparent;
+  font-size: 1rem; /* 16px */
+  transition: all 0.3s ease;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: 2%;
+  /* border: 1px solid; */
+  font-family: Poppins;
+  resize: none;
+}
+
+.textArea:focus {
+  caret-color: var(--text-flame-300);
+}
+
+.floatingLabel {
+  position: absolute;
+  left: 1rem;
+  color: black;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-size: 1rem; /* 16px */
+  top: 20px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.floatingLabel.active {
+  font-size: 0.75rem; /* 12px */
+  color: var(--text-flame-300);
+  font-weight: 400;
+}
+
+.floatingLabel.typed {
+  color: var(--text-black-600);
+}
+
+.floatingLabel.errortext {
+  color: var(--error-red);
+}
+
+.error {
+  font-family: poppins, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--error-red);
+  line-height: 100%;
+  position: absolute;
+  left: 1rem;
+  /* margin-top: 4px; */
+  height: 21px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1439px) {
+  .textAreaContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1126px) {
+  .textAreaContainer {
+    width: 100%;
+  }
+
+  .floatingLabel {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+  }
+
+}
+
+@media screen and (max-width: 590px) {
+  /* .textAreaContainer {
+    width: 310px;
+  } */
+
+  .floatingLabel {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+  }
+
+  .error {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.24px;
+  }
+}

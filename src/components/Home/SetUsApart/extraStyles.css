@@ -1,0 +1,11 @@
+.middleCardContainer{
+    width: 738px !important;
+    /* scale: (1.5) !important; */
+    opacity: 100% !important;
+    /* transition: 0.2s ease-in-out; */
+}
+
+.middleCircleNo{
+    height: 72px !important;
+    width: 72px !important;
+}

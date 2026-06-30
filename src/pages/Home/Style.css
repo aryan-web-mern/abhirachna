@@ -1,0 +1,13 @@
+#home-page1,#home-page2,#home-page3,#home-page4 {
+  /* background-color: white; */
+}
+#home-page2,
+#home-page3,
+#home-page4,
+#home-page5 {
+  /* height: 100vh; 
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box; */
+}

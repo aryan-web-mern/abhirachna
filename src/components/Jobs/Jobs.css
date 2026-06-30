@@ -1,0 +1,186 @@
+.job-row .view-btn {
+    background: transparent;
+    border: 1px solid var(--red-normal);
+    /* orange border */
+    color: var(--red-normal);
+}
+
+.job-row .view-btn:hover {
+    background: var(--red-normal-hover);
+
+    color: #fff;
+    /* border-color: #f15a24; */
+}
+
+/* Filled “Apply Now” */
+.job-row .apply-btn {
+    background: var(--red-normal);
+    border: 1px solid var(--red-normal);
+    color: var(--text-white-100);
+}
+
+.view-btn,
+.apply-btn {
+    width: 161px;
+    height: 48px;
+}
+
+.job-row .apply-btn:hover {
+    background: var(--red-normal-hover);
+    /* darker orange on hover */
+}
+
+/* -------------- Buttons -------------- */
+.job-row .view-btn,
+.job-row .apply-btn {
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 6px 16px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/* -------------- Individual Rows -------------- */
+.job-row {
+    align-items: center;
+    padding: 16px 24px;
+    background-color: #FEF4EE;
+    border-bottom: 1px solid #E0D6D0;
+    font-size: 14px;
+}
+
+.job-table tbody td {
+    border-bottom: 1px solid #ffffff;
+}
+
+
+
+
+/* Last row: remove bottom border */
+.job-row:last-child {
+    border-bottom: none;
+}
+
+/* Column-specific alignment */
+.job-row .job-roll {
+    text-align: left;
+
+}
+
+
+.job-row .job-id,
+.job-row .experience {
+    text-align: left;
+    color: #555;
+    Width: 305px;
+    Height: 28px;
+    /* slightly lighter for body text */
+}
+
+.job-row .actions {
+    text-align: right;
+}
+
+.job-table th,
+.job-table td {
+    width: 93px;
+    padding: 16px 24px;
+    text-align: left;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+/* Header column alignment */
+.job-table-header .job-roll {
+    text-align: left;
+}
+
+
+.job-roll {
+    width: 30rem !important;
+}
+
+.job-table-header .job-id,
+.job-table-header .experience {
+
+    Width: 305px;
+    Height: 28px
+}
+
+.search-input {
+    margin-left: -13rem;
+}
+
+.job-search-input {
+    position: absolute;
+    padding: 25px;
+    cursor: pointer;
+}
+
+.filter-panel.open {
+    scrollbar-width: none;
+    background: var(--text-flame-50);
+    border-radius: 26px;
+}
+
+.filter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: rgba(0, 0, 0, 0.5); */
+    z-index: 150;
+}
+
+.filter-overlay {
+    position: static;
+}
+
+.filter-panel {
+    position: fixed;
+    /* top: 60px; */
+    right: 0;
+    /* width: 320px; */
+    height: calc(100vh - 60px);
+    background: #ffffff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 200;
+    overflow-y: auto;
+    padding: 20px;
+    margin-top: -56px;
+
+    width: 42rem;
+}
+
+.job-table-container {
+    margin-top: 20px;
+    place-self: anchor-center;
+    position: relative;
+    width: 1320px;
+    border-collapse: collapse;
+    background: #fef4ee;
+    border-radius: 20px;
+    background: #fef4ee;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-height: 740px;
+    overflow-y: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-panel {
+    position: absolute;
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 480px) {
+
+    .job-row .view-btn,
+    .job-row .apply-btn {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+}

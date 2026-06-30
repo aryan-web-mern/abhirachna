@@ -1,0 +1,239 @@
+html,
+body,
+#root {
+  /* height: 100%;
+  width: 100%; */
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent;
+  outline: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --secondary-bg: #0e1b5f;
+  --primary-bg: #0e1b5f;
+
+  /* Light shades */
+  --red-light: #fde6e9;
+  --red-light-hover: #fbe4de;
+  --red-light-active: #f8c8ba;
+
+  /* Normal shades */
+  --red-normal: #e74c21;
+  --red-normal-hover: #d0441e;
+  --red-normal-active: #b93d1a;
+
+  /* Dark shades */
+  --red-dark: #ad3919;
+  --red-dark-hover: #8b2e14;
+  --red-dark-active: #68220f;
+
+  /* Darkest shade */
+  --red-darker: #511b0c;
+
+  /* Light shades */
+  --blue-light: #e7e8ef;
+  --blue-light-hover: #dbdde7;
+  --blue-light-active: #b4b8cd;
+
+  /* Normal shades */
+  --blue-normal: #0e1b5f;
+  --blue-normal-hover: #0d1856;
+  --blue-normal-active: #0b164c;
+
+  /* Dark shades */
+  --blue-dark: #0b1447;
+  --blue-dark-hover: #081039;
+  --blue-dark-active: #060c2b;
+
+  /* Darkest shade */
+  --blue-darker: #050921;
+
+  /* Primitive */
+  --text-flame-50: #fef4ee;
+
+  --text-flame-100: #fce6d8;
+
+  --text-flame-200: #f8c9b0;
+
+  --text-flame-300: #f3a37e;
+
+  --text-flame-400: #ec744b;
+
+  /* Black Text Shades */
+  --text-black-28: #8e98a8;
+  /* Low emphasis / disabled */
+  --text-black-60: #e9ebf8;
+  /* Secondary text */
+  --text-black-87: #e9ebf8;
+  /* Primary text */
+  --text-black-100: #000000;
+
+  --text-black-500: #6d6d6d;
+
+  --text-black-600: #5d5d5d;
+
+  --text-black-700: #4f4f4f;
+
+  --text-black-800: #454545;
+  /* Headings or full emphasis */
+
+  /* White Text Shades */
+  --text-white-28: #ffffff47;
+  /* Low emphasis on dark bg */
+  --text-white-60: #ffffff99;
+  /* Medium emphasis on dark bg */
+  --text-white-87: #ffffffde;
+  /* High emphasis on dark bg */
+  --text-white-100: #ffffff;
+  /* Pure white */
+
+  --black-linear-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    #000000 100%
+  );
+  --white-linear-gradient: radial-gradient(
+    52.57% 51.07% at 50% 50.05%,
+    rgba(255, 255, 255, 0) 35.1%,
+    #ffffff 100%
+  );
+
+  --error-red: #e8152e;
+
+  --link-color: #dcdcdc;
+}
+
+/* Base Font Setup */
+
+/* ------------ DISPLAY ------------ */
+h1 {
+  font-size: 2.5rem;
+  /* 40px */
+  line-height: 3.75rem;
+  /* 60px */
+  font-weight: 600;
+  /* SemiBold */
+  letter-spacing: 0.8px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  /* 40px */
+  line-height: 3.75rem;
+  /* 60px */
+  font-weight: 400;
+  /* Regular */
+  letter-spacing: 0.8px;
+}
+
+/* ------------ HEADINGS ------------ */
+h3 {
+  font-size: 2.25rem;
+  /* 36px */
+  line-height: 3.375rem;
+  /* 54px */
+  font-weight: 400;
+  letter-spacing: 0.72px;
+}
+
+h4 {
+  font-size: 1.25rem;
+  /* 20px */
+  line-height: 2rem;
+  /* 32px */
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+h5 {
+  font-size: 1rem;
+  /* 16px */
+  line-height: 1.5rem;
+  /* 24px */
+  font-weight: 500;
+  letter-spacing: 0.32px;
+}
+
+/* ------------ PARAGRAPH ------------ */
+p {
+  font-size: 1rem;
+  /* 16px */
+  line-height: 1.625rem;
+  /* 26px */
+  font-weight: 400;
+  letter-spacing: 0.32px;
+}
+
+.paragraph-large {
+  font-size: 1.25rem;
+  /* 20px */
+  line-height: 2rem;
+  /* 32px */
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+
+.paragraph-medium {
+  font-size: 1.125rem;
+  /* 18px */
+  line-height: 1.875rem;
+  /* 30px */
+  font-weight: 400;
+  letter-spacing: 0.36px;
+}
+
+.paragraph-small {
+  font-size: 0.875rem;
+  /* 14px */
+  line-height: 1.375rem;
+  /* 22px */
+  font-weight: 300;
+  letter-spacing: 0.28px;
+}
+
+/* ------------ LABEL ------------ */
+.label {
+  font-size: 1.125rem;
+  /* 18px */
+  line-height: 1.75rem;
+  /* 28px */
+  font-weight: 400;
+  letter-spacing: 0.36px;
+}
+
+.label-medium {
+  font-size: 1rem;
+  /* 16px */
+  line-height: 1.5rem;
+  /* 24px */
+  font-weight: 400;
+  letter-spacing: 0.32px;
+}
+
+.label-small {
+  font-size: 0.875rem;
+  /* 14px */
+  line-height: 1.25rem;
+  /* 20px */
+  font-weight: 400;
+  letter-spacing: 0.28px;
+}
+
+/* ------------ ------------ */
+.logo-text {
+  font-size: 2.5rem;
+  /* 40px */
+  line-height: 3.75rem;
+  /* 60px */
+  font-weight: 600;
+  letter-spacing: 2%;
+}

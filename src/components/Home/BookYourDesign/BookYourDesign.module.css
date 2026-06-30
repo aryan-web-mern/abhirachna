@@ -1,0 +1,18 @@
+.mainConatiner {
+  padding: 9.375rem 2.5rem 0rem 2.5rem;
+  /* width: 90rem; */
+  background-color: var(--text-white-100);
+  justify-content: center;
+  display: flex;
+  user-select: none;
+}
+
+@media (max-width: 1024px) {
+  .mainConatiner {
+    padding: 80px 40px;
+  }
+  @media (max-width: 590px) {
+  .mainConatiner {
+    padding: 60px 16px;
+  }}
+}

@@ -1,0 +1,277 @@
+.parentContainer {
+  /* width: 90rem; */
+  padding: 9.375rem 40px 0px 40px;
+  background-color: var(--text-white-100);
+  display: flex;
+  justify-content: center;
+}
+
+.faqContainer {
+  /* place-self: center; */
+  width: 85rem;
+  height: 45.25rem;
+  border-radius: 1.875rem;
+  padding: 2.5rem;
+  gap: 2.5rem;
+  background-color: var(--text-flame-50);
+  justify-content: center;
+  align-items: center;
+  /* place-self: center; */
+  display: flex;
+}
+
+.questionContainer {
+  width: 100%;
+  max-width: 51.875rem;
+  height: 40.25rem;
+  gap: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.questionContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.context {
+  display: flex;
+}
+
+.question {
+  max-width: 51.875rem;
+  border-radius: 0.625rem;
+  padding-top: 1.25rem;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 59px;
+}
+
+.lineContent {
+  display: flex;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.head {
+  color: var(--text-black-100);
+}
+
+.rigntContent {
+  width: 25.625rem;
+  place-self: start;
+  text-align: end;
+}
+
+.paragraphMedium {
+  color: #5d5d5d !important;
+  margin-top: 1.25rem;
+  margin-left: 5.5rem;
+}
+
+/* --------------------------Dropdowns css--------------------------- */
+
+.accordionContainer {
+  overflow: hidden;
+}
+
+.accordionContainer button {
+  background-color: var(--text-flame-50);
+  border: none;
+}
+
+.toggleIcon {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 20px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.accordionContent {
+  background-color: var(--text-flame-50);
+  color: var(--text-black-600);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  width: 47.063rem;
+  overflow: hidden;
+  max-height: 0;
+  min-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 2.5rem;
+  /* transition: all 0.5 ease; */
+  -webkit-transition: all 0.5 ease;
+
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+}
+
+.accordionContent.open {
+  /* min-height: fit-content; */
+  /* Enough to fit your largest content */
+  opacity: 1;
+  /* min-height: fit-content; */
+  max-height: 1000px;
+}
+
+.toggleIcon {
+  cursor: pointer;
+}
+
+.questionHead {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1440px) {
+  .faqContainer {
+    width: 100%;
+  }
+
+  /* .questionContainer {
+
+  } */
+
+  .accordionContent {
+    width: 100%;
+    /* height: 100%; */
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .parentContainer{
+    padding: 5rem 2.5rem;
+  }
+  .faqContainer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .rigntContent {
+    order: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+    text-align: -webkit-center;
+    align-self: center;
+  }
+
+  .questionContainer {
+    order: 2;
+  }
+  .accordionContent {
+    padding-left: 30px;
+    width: 90%;
+  }
+
+  .question {
+    padding-left: 0;
+  }
+
+  .head {
+    justify-content: center;
+    width: fit-content;
+    display: flex;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+
+  .paragraphMedium {
+    margin-left: 0;
+    font-size: 1rem;
+    /* 16px */
+    line-height: 1.625rem;
+    /* 26px */
+    font-weight: 400;
+    letter-spacing: 0.32px;
+    max-width: 35rem;
+  }
+
+  .lineContent {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.02rem;
+  }
+
+  .accordionContent p {
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    letter-spacing: 0.0175rem;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .parentContainer {
+    padding: 60px 16px;
+    /* min-height: 100vh; */
+  }
+
+  .faqContainer {
+    border-radius: 16px;
+    padding: 40px 16px;
+  }
+  .questionContainer {
+    gap: 8px;
+  }
+  .question {
+    padding-right: 0px;
+  }
+  .accordionContent {
+    padding-left: 30px;
+    width: 90%;
+  }
+  .head1 {
+    font-weight: 500;
+    /* 500 is Medium */
+    font-style: normal;
+    font-size: 1.25rem;
+    /* 20px = 1.25rem */
+    line-height: 1.5rem;
+    /* 24px = 1.5rem */
+    letter-spacing: 0.02em;
+  }
+
+  .paragraphMedium {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.02em;
+  }
+
+  .lineContent {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.75rem;
+    line-height: 1.375rem;
+    letter-spacing: 0.02em;
+  }
+
+  .accordionContent p {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.75rem;
+    line-height: 1.625rem;
+    letter-spacing: 0.02em;
+  }
+  .questionInline {
+    white-space: pre-wrap;
+  }
+  .accordionContainer {
+    overflow: unset;
+  }
+}

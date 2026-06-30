@@ -1,0 +1,135 @@
+.innerContent {
+  padding: 4px 8px;
+  gap: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.foo {
+  cursor: pointer;
+}
+
+.ContentWrapper {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.checkbox__input {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+}
+
+.checkbox__inner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #0e1b5f;
+  background: transparent no-repeat center;
+}
+
+input[type="radio"] {
+  appearance: none;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--red-normal);
+
+  position: relative;
+  top: 4px;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.optionsLabel {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.125rem;
+  cursor: pointer;
+}
+
+.options input[type="radio"]:checked {
+  border: 6px solid #e74c21 !important;
+  background-color: white;
+}
+
+.checkbox__input:checked + .checkbox__inner {
+  border: 6px solid #e74c21 !important;
+}
+
+.selectedOptionClass {
+  border: 6px solid #e74c21 !important;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* border: 1px solid; */
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.hoverBox {
+  width: 14.4375rem;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  background-color: #fef4ee;
+  /* word-break: break-all; */
+  /* line-break: anywhere; */
+
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 0.32px;
+
+  position: absolute;
+  left: -235px;
+}
+
+.svg {
+  height: 24px;
+  width: 24px;
+}
+
+@media (max-width: 1024px) {
+  .options {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+
+  .svg {
+    height: 22px;
+    width: 22px;
+  }
+}
+
+@media (max-width: 590px) {
+  .options {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  .svg {
+    height: 20px;
+    width: 20px;
+  }
+}

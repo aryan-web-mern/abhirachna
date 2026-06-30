@@ -1,0 +1,136 @@
+.blogCardContainer {
+  /* height: 15.75rem; */
+  max-width: 66.5rem;
+  /* 1064px */
+  border-radius: 2.25rem;
+  /* 32px */
+  border: 1px solid var(--text-flame-100);
+  padding: 2.25rem;
+  /* 36px */
+  background: linear-gradient(
+    180deg,
+    var(--text-white-100),
+    var(--text-flame-50)
+  );
+  position: relative;
+  gap: 8px;
+  /* 8px */
+}
+
+.header {
+  width: 92%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: -1rem;
+  /* -16px */
+}
+
+.paragraphSmall {
+  margin-top: 0.75rem !important;
+  /* 12px */
+  margin-bottom: 1.25rem !important;
+  /* 20px */
+}
+
+.btnsContainer {
+  display: flex;
+  gap: 1.25rem;
+  /* 20px */
+}
+
+.btn {
+  outline: none;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.circle {
+  width: 2.25rem;
+  /* 36px */
+  height: 2.25rem;
+  /* 36px */
+  border-radius: 2.219rem;
+  /* 35.5px */
+  border: 1px solid var(--text-flame-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-white-100);
+  color: var(--text-flame-300);
+  font-size: 1rem;
+  /* 16px */
+  font-weight: 600;
+  line-height: 1;
+}
+
+.infoContainer {
+  /* border: 1px solid black; */
+  height: 100%;
+  display: flex;
+  gap: 5rem;
+  /* 80px */
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  justify-content: space-between;
+  /* 20px */
+}
+
+.info h5 {
+  font-size: 1.125rem;
+  /* 18px */
+}
+
+.info p {
+  color: var(--text-black-600);
+}
+
+.info span {
+  font-weight: 400;
+  font-size: 0.75rem;
+  /* 12px */
+  line-height: 1rem;
+  /* 16px */
+  color: var(--text-black-800);
+}
+
+.image {
+  min-width: 15.188rem;
+  max-width: 15.188rem;
+  /* 243px */
+  height: 180px;
+  /* 136px */
+  border-radius: 0.5rem;
+  /* 8px */
+  /* border: 1px solid black; */
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  /* 8px */
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .info h4 {
+    font-weight: 400;
+    font-size: 1rem;
+    /* 16px */
+    line-height: 1.5rem;
+  }
+
+  .image img {
+    max-width: 25rem;
+    width: 100%;
+  }
+}

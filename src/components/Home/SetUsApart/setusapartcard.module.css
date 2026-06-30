@@ -1,0 +1,151 @@
+.cardConatiner {
+  height: 190px;
+
+  width: 41.5rem;
+  border-radius: 1.8rem;
+
+  padding: 36px;
+  background-color: var(--text-flame-100);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  position: relative;
+  opacity: 60%;
+  /* transition: all 0.1s ease; */
+}
+
+.circleNo {
+  height: 64.8px;
+  width: 64.8px;
+
+  border-radius: 31.9504px;
+  border: 3.6px solid var(--text-flame-50); /* 4px */
+  background-color: var(--text-flame-400);
+  padding: 1rem; /* 16px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -15%;
+  top: -36px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.4px;
+  color: var(--text-flame-50);
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.textContainer p {
+  color: var(--text-black-600);
+}
+
+@media screen and (max-width: 1440px) {
+  .cardConatiner {
+    width: 570px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cardConatiner {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .cardConatiner {
+    height: 130px;
+    padding: 24px;
+    width: 80%;
+  }
+
+  .textContainer h4 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.32px;
+  }
+
+  .textContainer p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    letter-spacing: 0.28px;
+  }
+
+  .circleNo {
+    height: 48px;
+    width: 48px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    top: -18px;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .cardConatiner{
+    /* width: 420px; */
+    width: 90%;
+  }
+
+  .textContainer p {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.24px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .cardConatiner {
+    width: 304px;
+    /* width: 85%;  */
+    height: 162px;
+    padding: 20px;
+  }
+
+  .textContainer h4 {
+    font-size: 16px;
+  }
+
+  .textContainer p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .circleNo {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    top: -18px;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .cardConatiner {
+    width: 90%;
+    height: 162px;
+    padding: 20px;
+  }
+  .textContainer h4 {
+    font-size: 14px;
+    /* line-height: 16px; */
+  }
+
+  .textContainer p {
+    font-size: 12px;
+    font-weight: 400;
+    /* line-height: 16px; */
+  }
+}

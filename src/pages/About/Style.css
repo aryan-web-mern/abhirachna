@@ -1,0 +1,30 @@
+.about {
+  /* display: flex;
+  flex-direction: column; */
+  /* align-items: center; */
+  /* gap: 20px; */
+  position: relative;
+  overflow-x: hidden;
+  /* place-self: center; */
+}
+
+/* 
+.about section:nth-child(1) {
+  z-index: 1;
+}
+.about section:nth-child(2) {
+  z-index: 2;
+}
+.about section:nth-child(3) {
+  z-index: 3;
+}
+.about section:nth-child(4) {
+  z-index: 4;
+} */
+
+#about-page1,
+#about-page2,
+#about-page3,
+#about-page4 {
+  background-color: white;
+}

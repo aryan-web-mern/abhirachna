@@ -1,0 +1,138 @@
+.mainContainer {
+  display: flex;
+  height: 100%;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 39px 80px;
+}
+
+.innerContainer {
+  padding: 60px 20px 40px;
+  /* max-height: 748px; */
+  width: 100%;
+  max-width: 1280px;
+  background-color: #fef4ee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  margin-top: 68px;
+  /* margin-left: 80px; */
+  position: relative;
+}
+
+.centerdata {
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.btn1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  padding: 12px 44px 12px 44px;
+  border-radius: 24px;
+  border: none;
+  /* transition: all 0.3s ease; */
+  text-align: center;
+  outline: none;
+  margin-top: 20px;
+}
+
+.ButtonContainer {
+  cursor: pointer;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 20px;
+}
+
+.mainformContext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* gap: 112px; */
+  width: 100%;
+  max-width: 630px;
+  place-self: center;
+}
+
+.mainContextInput {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.headingLarger {
+  color: var(--text-black-100);
+  max-width: 630px;
+}
+
+.headingSmaller {
+  color: var(--text-black-600);
+  max-width: 846px;
+  text-align: center;
+  text-wrap-style: balance;
+}
+
+.BackButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+@media screen and (max-width: 1024px) {
+  .heading {
+    padding: 0px 60px;
+  }
+
+  .headingLarger {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+  }
+
+  .headingSmaller {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+  }
+
+  .mainformContext {
+    max-width: 562px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .heading {
+    gap: 12px;
+    padding: 0px 30px;
+  }
+
+  .headingLarger {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+  }
+
+  .headingSmaller {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    letter-spacing: 0.28px;
+  }
+}

@@ -1,0 +1,80 @@
+.full-screen-gradient-overlay {
+  position: fixed;
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999; /* ensure it's on top */
+  pointer-events: none; /* allow clicks through */
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 1) 80%
+  );
+  transform: scaleX(1);
+}
+
+.animation-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 99;
+  background: white;
+}
+
+.animation-overlay > * {
+  pointer-events: none;
+}
+
+.animation-overlay section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  width: 100%;
+}
+
+.move-left {
+  justify-content: flex-start;
+}
+
+.move-right {
+  justify-content: flex-end;
+}
+
+.scroll-images {
+  height: 250px;
+  border-radius: 16px;
+  flex: 0 0 auto;
+  object-fit: cover;
+}
+
+.responsive-images {
+  height: 300px;
+  border-radius: 16px;
+}
+
+@media screen and (max-width: 1023px) {
+  .responsive-images {
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .overlay-scroll {
+    gap: 10px;
+    /* margin-bottom: 10px; */
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .scroll-images {
+    height: 200px;
+  }
+  .responsive-images {
+    height: 180px;
+  }
+}

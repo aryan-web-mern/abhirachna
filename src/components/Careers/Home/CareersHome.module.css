@@ -1,0 +1,140 @@
+.mainHeadref {
+  margin-top: 12.75rem;
+}
+.careersContainerHome {
+  /* min-height: 100vh; */
+  /* width: 90rem; */
+  background-color: var(--text-white-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* height: 26.75rem; */
+}
+
+.careersContainerHome h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--text-black-100);
+}
+
+.flipContainer {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  color: var(--blue-normal);
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.flipList {
+  animation: change 6.5s steps(20) infinite;
+  animation-delay: 1s;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flipList li {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400 !important;
+  font-size: 2.5rem !important;
+  line-height: 125%;
+}
+
+/* @keyframes change {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  20% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  30% {
+    transform: translate3d(0, -50px, 0);
+  }
+
+  40% {
+    transform: translate3d(0, -50px, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -100px, 0);
+  }
+
+  60% {
+    transform: translate3d(0, -100px, 0);
+  }
+
+  70% {
+    transform: translate3d(0, -150px, 0);
+  }
+
+  80% {
+    transform: translate3d(0, -150px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -200px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, -200px, 0);
+  }
+} */
+
+@media screen and (max-width: 1023px) {
+  .mainHeadref {
+    margin-top: 7.5rem;
+  }
+
+  .careersContainerHome h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+  }
+
+  .flipContainer {
+    margin-top: 0px;
+    margin-bottom: 2.5rem;
+  }
+
+  .flipList li {
+    /* height: 50px; */
+    font-weight: 500 !important;
+    font-size: 24px !important;
+    line-height: 32px !important;
+    letter-spacing: 0% !important;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .careersContainerHome h2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0%;
+  }
+
+  .flipContainer {
+    margin: 0px;
+    margin-bottom: 1.25rem;
+  }
+
+  .flipList li {
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    line-height: 32px !important;
+    letter-spacing: 0% !important;
+  }
+}

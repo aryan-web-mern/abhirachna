@@ -1,0 +1,367 @@
+.mainContainer {
+  padding: 9.375rem 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.leadDetailsContainer {
+  max-width: 1132px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.userDetailsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 24px;
+  height: 77px;
+  padding: 12px;
+  border: 1px solid #e7e7e7;
+}
+
+.nameLeftContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  width: 38px;
+  height: 38px;
+  padding: 7px 8px;
+  background-color: var(--blue-light);
+}
+
+.textContainer span {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 16px;
+  color: #00000099;
+}
+
+.nameTime {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nameTime div {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  font-weight: 400;
+}
+
+.nameTime span {
+  color: #00000099;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.28px;
+  font-weight: 400;
+}
+
+.folderIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid #f3a37e;
+  border-radius: 9999px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.iconContainer {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 4px;
+  background-color: var(--text-flame-100);
+}
+
+.numberContainer,
+.emailContainer,
+.addressContainer {
+  display: flex;
+  justify-content: start;
+  gap: 8px;
+  align-items: center;
+  border-radius: 20px;
+  height: 66px;
+  padding: 8px 12px;
+  border: 1px solid #e7e7e7;
+  width: 100%;
+}
+
+.numberContainer p,
+.emailContainer p,
+.addressContainer p {
+  color: var(--text-black-700);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  font-weight: 400;
+}
+
+.contactDetailsContainer {
+  width: 100%;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.leadInfoContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 32px;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topContainer h2 {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  font-weight: 500;
+}
+
+.roomTypesContainer {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.roomType {
+  padding: 4px 8px;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--text-flame-50);
+}
+
+.roomType p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.24px;
+  color: #888888;
+}
+
+.roomImgContainer {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  padding: 6px;
+}
+
+.bottomContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.leadDataContainer {
+  height: 44px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.arrowContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.arrowContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.arrowContainer.selected {
+  transform: rotate(180deg);
+}
+
+.leadDataHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.leadDataHeading h3 {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.36px;
+  font-weight: 400;
+}
+.leadDataHeading span {
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  background-color: var(--red-normal);
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+.infoChecks {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 8px;
+  overflow-y: auto;
+  margin-top: -40px;
+}
+
+.infoChecks::-webkit-scrollbar {
+  display: none;
+}
+
+.infoChecks label {
+  display: flex;
+  padding: 4px;
+  border-radius: 100px;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 0 2px 0 var(--black-100);
+  background-color: #ffffffe5;
+}
+
+/* Tab Styles */
+@media (max-width: 1024px) {
+  .mainContainer {
+    padding: 80px 40px;
+  }
+
+  .nameTime div {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    font-weight: 400;
+  }
+
+  .nameTime span {
+    color: #00000099;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    font-weight: 400;
+  }
+
+  .numberContainer p,
+  .emailContainer p,
+  .addressContainer p {
+    color: var(--text-black-700);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    font-weight: 400;
+  }
+
+  .leadDataHeading h3 {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.28px;
+    font-weight: 400;
+  }
+  .infoChecks label {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.28px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 590px) {
+  .mainContainer {
+    padding: 60px 16px;
+    gap: 16px;
+  }
+
+  .folderIconContainer {
+    width: 36px;
+    height: 36px;
+  }
+
+  .bottomContainer {
+    gap: 12px;
+  }
+
+  .infoChecks {
+    margin-top: -10px;
+  }
+
+  .infoChecks label {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.24px;
+  }
+}
+
+/*Small Mobile Styles */
+@media (max-width: 500px) {
+  .contactDetailsContainer {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+}

@@ -1,0 +1,147 @@
+.mainContainer {
+  padding: 150px 40px 40px 40px;
+}
+
+.animationFormBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--text-white-50);
+}
+
+.formMainContainer {
+  width: 85rem; /* 1360px */
+  height: 35.5rem; /* 568px */
+  border-radius: 1.875rem; /* 30px */
+  padding: 2.5rem; /* 40px */
+  background-color: var(--text-flame-50);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.animateFormLeftContainer {
+  height: 100%;
+  width: 25.8125rem; /* 413px */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.animateFormHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
+}
+
+.animateFormHeader p {
+  color: var(--text-black-600);
+}
+
+.animateFormFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
+}
+
+.animateFormFooter div {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* 20px */
+  color: var(--text-black-600);
+}
+
+.animateFormRightContainer {
+  width: 39.375rem; /* 630px */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem; /* 60px */
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.planeAnimationContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem; /* 60px */
+  z-index: 10;
+}
+
+.humanSvg {
+  overflow: visible;
+  margin-right: 9.375rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .mainContainer {
+    padding: 80px 40px;
+    width: 100%;
+  }
+
+  .animateFormLeftContainer {
+    width: 100%;
+  }
+
+  .formMainContainer {
+    height: 756px;
+    width: 100%;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 40px 12px;
+  }
+
+  .animateFormHeader {
+    width: 100%;
+    text-align: center;
+  }
+
+  .animateFormHeader h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0px;
+  }
+
+  .animateFormHeader p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.32px;
+  }
+
+  .animateFormFooter {
+    display: none;
+  }
+
+  .planeAnimationContainer svg {
+    margin-right: 6rem;
+  }
+
+  .animateFormRightContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .formMainContainer {
+    border-radius: 16px;
+    height: 618px;
+  }
+
+  .animateFormRightContainer {
+    width: 100%;
+    gap: 40px;
+  }
+
+  .animateFormHeader p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.24px;
+  }
+}

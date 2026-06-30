@@ -1,0 +1,81 @@
+.circleBtn {
+  box-sizing: content-box;
+  width: 1.5rem;
+  max-height: 42px;
+  background-color: transparent;
+  border: 6px solid var(--text-white-100);
+  border-radius: 40px; /* 74px */
+  color: #212529;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  overflow: hidden;
+  text-align: right;
+  padding: 9px;
+  transition: width 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+.circleBtn.left.selected {
+  background-color: #ec744b;
+}
+
+.left {
+  justify-content: end;
+}
+.left .btnText {
+  margin-right: -0.625rem; /* -10px */
+}
+
+.right .btnText {
+  margin-left: -0.8125rem; /* -13px */
+}
+
+.btnText {
+  opacity: 0;
+  transition: all 0.2s ease;
+  color: #3e0d0c;
+  scale: 0.3;
+}
+
+.expanded {
+  width: 82px; /* 100px */
+}
+
+.circleBtn.expanded .btnText {
+  opacity: 1;
+  scale: 1;
+  margin-left: 0.25rem;
+  /* ml: 4px */
+}
+
+.circleBtn.expanded .btnText {
+  margin-right: 0.625rem; /* 10px */
+}
+
+/*Tablet and Mobile styles */
+@media (max-width: 1024px) {
+  .btnText {
+    display: none;
+  }
+  .expanded {
+    width: fit-content; /* 100px */
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 590px) {
+  .circleBtn {
+    border: none;
+    padding: 9px;
+    /* background-color: #ec744b; */
+    transition: width 0.3s ease;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .btnText {
+    display: none;
+  }
+}

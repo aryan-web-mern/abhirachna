@@ -1,0 +1,152 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+
+.mainContainer {
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 4rem; /* 64px */
+  /* width: 39.625rem; */
+  background-color: white;
+  border-radius: 1.25rem; /* 20px */
+  border: 0.6px solid var(--text-flame-200); /* 2px */
+}
+
+.container:focus-within {
+  border: 0.0625rem solid var(--text-flame-300);
+}
+
+.haveValue {
+  border: 0.6px solid var(--text-black-500);
+}
+
+.errorBorder {
+  border: 0.6px solid var(--error-red);
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.floatingInput {
+  /* width: 600px; */
+  width: 90%;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 1rem; /* 16px */
+  transition: all 0.3s ease;
+  line-height: 100%;
+  letter-spacing: 2%;
+  font-weight: 400;
+  /* margin-top: 2px; */
+  font-family: Poppins, sans-serif;
+}
+
+.floatingInput:focus {
+  caret-color: var(--text-flame-300);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.floatingLabel {
+  position: absolute;
+  left: 1rem;
+  color: black;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-size: 1rem; /* 16px */
+  /* top: 0.25rem;  */
+  top: 10px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.floatingLabel.active {
+  /* top: -0.156rem;  */
+  /* top: -0.2rem; */
+  top: 0.125rem; /* 2px */
+  font-size: 0.75rem; /* 12px */
+  color: var(--text-flame-300);
+  font-weight: 400;
+}
+
+.floatingLabel.typed {
+  color: var(--text-black-600);
+}
+
+.floatingLabel.errortext {
+  color: var(--error-red);
+}
+
+.error {
+  font-family: poppins, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--error-red);
+  line-height: 100%;
+  position: absolute;
+  left: 1rem;
+  /* margin-top: 4px; */
+  height: 21px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1439px) {
+  .mainContainer {
+    width: 100%;
+  }
+
+  .container {
+    /* width: 35rem; */
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1126px) {
+  .container {
+    width: 100%;
+  }
+
+  .floatingInput {
+    width: 90%;
+  }
+
+  .floatingLabel {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .container {
+    /* width: 310px; */
+    width: 100%;
+  }
+
+  /* .floatingLabel {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 2%;
+  } */
+
+  .error {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.24px;
+  }
+}

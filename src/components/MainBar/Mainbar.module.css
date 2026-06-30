@@ -1,0 +1,436 @@
+.mainContainer {
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  padding: 0 80px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+.secondaryContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer svg {
+  cursor: pointer;
+  position: relative;
+  z-index: 9999999;
+}
+
+.logoContainer svg path {
+  fill: var(--blue-normal);
+  transition: fill 0.5s;
+}
+
+.headingContainer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999999;
+}
+
+.headingContainer h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 2.88px;
+  color: var(--blue-normal);
+  font-family: "Jost", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: color 0.5s;
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 23px;
+  cursor: pointer;
+  position: relative;
+  z-index: 9999;
+  height: fit-content;
+}
+
+.line1,
+.line2,
+.line3 {
+  border-radius: 60px;
+  background-color: var(--blue-normal);
+  transition: background-color 0.5s;
+}
+.line1,
+.line3 {
+  height: 4px;
+  width: 30px;
+  position: relative;
+  z-index: 999999;
+  /* transition: background-color 0.5s; */
+}
+
+.line2 {
+  position: absolute !important;
+  top: 13.7px;
+  width: 22px;
+  height: 4px;
+}
+.navOverlay {
+  position: absolute;
+  z-index: -1;
+  top: 50px;
+  right: 20px;
+  min-height: 100vh;
+  min-width: 95vw;
+  pointer-events: all;
+  background: transparent;
+  cursor: default;
+}
+
+.navTemp {
+  background-color: transparent;
+  z-index: 10001;
+}
+
+/* For transparent Navbar  */
+.navTransparent {
+  background: linear-gradient(
+    -180deg,
+    #0000009d 25%,
+    #0000009d 10%,
+    #00000000 100%
+  );
+  z-index: 10001;
+}
+
+.navTemp .headingContainer h1,
+.navTransparent .headingContainer h1 {
+  color: white;
+}
+
+.navTemp .line1,
+.navTransparent .line1 {
+  background-color: white;
+  transition: background-color 0.5s;
+}
+
+.navTemp .line2,
+.navTransparent .line2 {
+  background-color: white;
+  transition: background-color 0.5s;
+}
+
+.navTemp .line3,
+.navTransparent .line3 {
+  background-color: white;
+  transition: background-color 0.5s;
+}
+
+.navTemp .logoContainer svg path,
+.navTransparent .logoContainer svg path {
+  fill: white;
+}
+/* --------------------------- */
+
+/* For transparent Navbar  and Open Menu*/
+.openMenu.navTransparent {
+  background: transparent;
+}
+.openMenu.navTransparent .headingContainer h1 {
+  color: var(--blue-normal);
+  transition: color 0.5s;
+}
+.openMenu.navTransparent .line1 {
+  background-color: var(--blue-normal);
+  transition: background-color 0.5s;
+}
+.openMenu.navTransparent .line2 {
+  /* pointer-events: none; */
+}
+.openMenu.navTransparent .line3 {
+  background-color: var(--blue-normal);
+  transition: background-color 0.5s;
+}
+
+.openMenu.navTransparent .logoContainer svg path {
+  fill: var(--blue-normal);
+  transition: fill 0.5s;
+}
+/* -------------------------- */
+
+/* For Visible Navbar  and Open Menu*/
+.openMenu {
+  background: transparent;
+}
+.openMenu .headingContainer h1 {
+  color: white;
+}
+.openMenu .line1 {
+  background-color: white;
+}
+.openMenu .line2 {
+  pointer-events: none;
+}
+.openMenu .line3 {
+  background-color: white;
+}
+
+.openMenu .logoContainer svg path {
+  fill: white;
+}
+/* -------------------------- */
+
+/* MENUBAR CSS */
+.navlinksContainer {
+  display: none;
+  opacity: 0;
+  flex-direction: column;
+  /* position: absolute; */
+  gap: 12px;
+  align-items: center;
+
+  margin-top: 111px;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  /* pointer-eveASznts: all; */
+}
+.label {
+  text-align: center;
+  width: 200px;
+  padding: 12px 0;
+}
+.label span {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.label span:hover {
+  color: #e74c21 !important;
+  transition: color 0.1s;
+}
+.activeLabel {
+  color: #e74c21 !important;
+}
+
+.menuBarFooter {
+  display: none;
+  position: absolute;
+  bottom: 52px;
+  opacity: 0;
+  width: 97vw;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userDetails {
+  width: 320px;
+}
+
+.basicDetails,
+.loggedInDetails {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.basicDetails div {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+}
+.basicDetails a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.userDetails div {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+}
+.loggedInDetails div {
+  align-items: center;
+}
+.loggedIOutDetails {
+  display: flex;
+  align-items: center !important;
+  justify-content: end;
+  cursor: pointer;
+  pointer-events: all;
+}
+.userName {
+  text-decoration: underline;
+  cursor: pointer;
+  pointer-events: all;
+}
+.logout,
+.login {
+  color: var(--red-normal);
+  cursor: pointer;
+  pointer-events: all;
+}
+.phNo,
+.email {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.phNo,
+.email:hover {
+  pointer-events: all;
+}
+.button {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.mainContainer.navTransparent .mainMenuContainer,
+.mainContainer.navTransparent .label,
+.mainContainer.navTransparent .basicDetails a,
+.mainContainer.navTransparent .loggedInDetails {
+  color: var(--text-black-600);
+}
+
+.mainContainer.navVisible .mainMenuContainer,
+.mainContainer.navVisible .label,
+.mainContainer.navVisible .basicDetails a,
+.mainContainer.navVisible .loggedInDetails {
+  color: var(--link-color);
+}
+
+.mainMenuContainer {
+  position: relative;
+  display: flex;
+  /* align-items: end; */
+  justify-content: center;
+}
+
+/* .openMenu .menuContainer .line3 {
+  transform: rotate(45deg) translateY(-19px);
+  transition: transform 0.4s 0.15s;
+}
+.openMenu .menuContainer .line1 {
+  transform: rotate(-45deg) translateY(19px);
+  transition: transform 0.4s 0.15s;
+}
+.closeMenu .menuContainer .line3 {
+  transform: rotate(0) translateY(-0px);
+  transition: transform 0.4s 0.15s;
+}
+.closeMenu .menuContainer .line1 {
+  transform: rotate(0) translateY(0px);
+  transition: transform 0.4s 0.15s;
+} */
+
+@media (max-width: 1024px) {
+  .mainContainer {
+    padding: 0 2.5rem;
+    height: 3.75rem;
+  }
+  .logoContainer {
+    width: 1.875rem;
+    height: 1.625rem;
+  }
+
+  .logoContainer svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .headingContainer h1 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 1.92px;
+  }
+
+  .menuContainer {
+    gap: 0.875rem;
+  }
+
+  .menuBarFooter {
+    width: 96vw;
+  }
+  .menuContainer .line1,
+  .line3 {
+    height: 0.1875rem;
+    width: 1.25rem;
+  }
+
+  .line2 {
+    width: 0.75rem;
+    height: 0.1875rem;
+    top: 8.3px;
+    border-radius: 30px;
+  }
+
+  .label {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.02rem;
+  }
+  .basicDetails p,
+  .userDetails p {
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.375rem;
+    /* 22px */
+    font-weight: 300;
+    letter-spacing: 0.28px;
+  }
+}
+@media (max-width: 950px) {
+  .menuBarFooter {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .userDetails {
+    width: 100%;
+  }
+  .loggedInDetails {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .loggedInDetails div {
+    flex-direction: row-reverse;
+    gap: 4px;
+  }
+  .basicDetails,
+  .userNo {
+    display: none !important;
+  }
+}
+
+@media (max-height: 800px) {
+  .menuBarFooter {
+    gap: 30px;
+  }
+  .navlinksContainer {
+    margin-top: 50px;
+  }
+  .navlinksContainer .label {
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 590px) {
+  .mainContainer {
+    padding: 0 1rem;
+  }
+}
+/* For height  */
+@media (max-height: 700px) and (min-width: 951px) {
+  .menuBarFooter {
+    align-items: end;
+  }
+}

@@ -1,0 +1,386 @@
+/* Gallery Navbar Styles */
+
+.page-container {
+  height: 100%;
+  width: 100%;
+  background: var(--white-linear-gradient);
+}
+
+.nav-container {
+  /* margin-top: ; */
+  place-self: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fef4ee;
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 30px;
+}
+
+.nav-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.nav-container .nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 40px;
+}
+
+#save {
+  position: absolute;
+  left: -150px;
+}
+
+#filter {
+  position: absolute;
+  right: 0px;
+}
+
+/* Filter Panel Styles */
+.filter-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 150;
+}
+
+.filter-panel {
+  position: sticky;
+  top: 60px;
+  right: 0;
+  width: 320px;
+  max-height: 46.25rem;
+  /* height: calc(100vh - 60px); */
+  background: #ffffff;
+  transform: translateX(194%);
+  transition: transform 0.3s ease;
+  z-index: 200;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.filter-panel.open {
+  transform: translateX(0);
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.filter-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.search-Icon-jobs-list img {
+  top: 20px;
+  position: absolute;
+}
+.selected {
+  height: 32px !important;
+  font-size: 14px !important;
+  background-color: var(--text-flame-300) !important;
+  color: black;
+}
+
+.clear-all-btn {
+  background: none;
+  border: none;
+  color: #f97316;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.filter-section {
+  margin-bottom: 32px;
+}
+
+.filter-section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 16px 0;
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-option:hover {
+  background-color: #fce6d8;
+}
+
+.filter-option .img {
+  padding-top: 3px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: Inter;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid var(--text-flame-100);
+  height: 1.75rem;
+}
+
+.filter-option.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+/* Main Content */
+.main-content {
+  padding-top: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.masonry-container {
+  column-count: 4;
+  column-gap: 20px;
+  padding: 0 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.gallery-image.loaded {
+  opacity: 1;
+}
+
+.image-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--black-linear-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: red;
+}
+
+.image-overlay-left {
+  color: wheat;
+}
+
+.image-overlay.vicsible {
+  opacity: 1;
+}
+
+.cross-img {
+  width: 16px;
+  height: 16px;
+  margin-top: 7px;
+}
+
+.filter-panel {
+  position: absolute;
+  height: calc(100vh - 60px);
+  background: var(--text-white-100);
+  transform: translateX(194%);
+  transition: transform 0.3s ease;
+  z-index: 200;
+  overflow-y: auto;
+  padding: 1.25rem;
+  /* 20px */
+  margin-top: 0.5rem;
+  /* -56px */
+  width: 42rem;
+  border-radius: 1.625rem;
+  /* 26px */
+}
+
+.open {
+  scrollbar-width: none;
+  background: var(--text-white-100);
+  border-radius: 1.625rem;
+  left: 39rem;
+}
+
+.filter-overlay {
+  position: sticky !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 150;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .masonry-container {
+    column-count: 3;
+    column-gap: 15px;
+    padding: 0 8px;
+  }
+
+  .masonry-item {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-panel {
+    width: 280px;
+  }
+
+  .nav-title {
+    font-size: 16px;
+  }
+
+  .masonry-container {
+    column-count: 2;
+    column-gap: 12px;
+    padding: 0 6px;
+  }
+
+  .masonry-item {
+    margin-bottom: 12px;
+  }
+
+  .image-container {
+    border-radius: 12px;
+  }
+
+  .image-overlay {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .image-description {
+    font-size: 13px;
+  }
+
+  .main-content {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+@media (max-width: 590px) {
+  .search-Icon-jobs-list img {
+    top: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-panel {
+    width: 100vw;
+    right: 0;
+  }
+
+  .nav-title {
+    font-size: 15px;
+  }
+
+  .masonry-container {
+    column-count: 2;
+    column-gap: 10px;
+    padding: 0 4px;
+  }
+
+  .masonry-item {
+    margin-bottom: 15px;
+  }
+
+  .image-container {
+    border-radius: 12px;
+  }
+
+  .image-overlay {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .image-description {
+    font-size: 13px;
+  }
+}
+
+/* Loading animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.gallery-image.loaded {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--red-normal);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}

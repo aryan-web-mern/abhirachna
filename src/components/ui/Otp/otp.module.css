@@ -1,0 +1,143 @@
+.otpContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* 8px */
+  font-family: Poppins, sans-serif;
+  width: 100%;
+}
+
+/* .otpContainer p {
+  line-height: ;
+} */
+
+.otps {
+  display: flex;
+  gap: 1rem;
+  /* 16px */
+}
+
+.otp {
+  width: 4rem;
+  /* 64px */
+  height: 4rem;
+  /* 64px */
+  border-radius: 1.25rem;
+  /* 20px */
+  border: 0.038rem solid var(--text-flame-200);
+  /* 0.6px */
+  padding: 0.5rem 1rem;
+  /* 8px 16px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--text-white-100);
+}
+
+.otp.error {
+  border: 0.038rem solid #ff3333;
+  /* 0.6px */
+}
+
+.haveValue {
+  border: 1px solid var(--text-black-500);
+}
+
+.otp input {
+  height: 1.5rem;
+  /* 24px */
+  width: 1.5rem;
+  /* 24px */
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  /* 16px */
+  font-weight: 400;
+  letter-spacing: .02rem;
+  line-height: 1rem;
+  text-align: center;
+  background-color: inherit;
+  caret-color: var(--text-flame-300);
+}
+
+.error {
+  color: #ff3333;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+  /* 16px */
+  padding-left: 1rem;
+  /* 16px */
+  gap: 0.625rem;
+  /* 10px */
+}
+
+.text {
+  color: var(--text-black-600);
+}
+
+.resendDis {
+  color: var(--text-flame-300);
+  /* line-height: 100%; */
+}
+
+.resend {
+  color: var(--red-normal);
+  font-weight: 500;
+  /* line-height: 100%; */
+  cursor: pointer;
+}
+
+.textContainer button {
+  background-color: inherit;
+  outline: none;
+  border: none;
+}
+
+@media screen and (max-width: 590px) {
+
+  .otpContainer{
+    min-height: 320px;
+  }
+
+  .textContainer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .textContainer p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.24px;
+  }
+
+  .heading {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.28px;
+  }
+
+  .otps{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .otp.error{
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.24px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .otps {
+    gap: 8px;
+  }
+}

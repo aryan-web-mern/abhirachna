@@ -1,0 +1,116 @@
+.testmonialAnimationContainer {
+  /* width: 85rem;  */
+  width: 80rem !important;
+  height: 42.875rem; /* 686px */
+  border-radius: 1.875rem; /* 30px */
+  padding: 2.5rem; /* 40px */
+  background-color: var(--text-flame-50);
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonialAnimationLeft {
+  height: 37.875rem; /* 606px */
+  width: 25.625rem; /* 410px */
+  display: flex;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+
+.testimonialAnimationLeft div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
+}
+
+.testimonialAnimationLeft div p {
+  color: var(--text-black-600);
+}
+
+.testimonialAnimationRight {
+  height: 37.875rem;
+  width: 41.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1440px) {
+  .testmonialAnimationContainer {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .testmonialAnimationContainer {
+    width: 100%;
+    height: 950px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .testimonialAnimationLeft {
+    width: 100%;
+    /* align-items: center; */
+    text-align: center;
+    /* border: 1px solid; */
+  }
+
+  .testimonialAnimationLeft h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 2%;
+  }
+
+  .testimonialAnimationLeft p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 2%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .testmonialAnimationContainer {
+    width: 100%;
+    /* height: 100%;
+    height: 859px; */
+    height: 900px;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 0.75rem;
+    border-radius: 1rem;
+    justify-content: center;
+  }
+
+  .testimonialAnimationLeft {
+    width: 278px;
+    height: 100%;
+    text-align: center;
+  }
+
+  .testimonialAnimationLeft h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.4px;
+  }
+
+  .testimonialAnimationLeft p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.24px;
+  }
+
+  .testimonialAnimationRight {
+    min-width: 100%;
+  }
+
+  .testimonialAnimationRight svg {
+    position: relative;
+    scale: 0.9;
+  }
+}

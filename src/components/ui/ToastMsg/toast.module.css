@@ -1,0 +1,75 @@
+.toastContainer {
+  width: 29.1875rem;
+  height: 5.25rem;
+  border-radius: 2rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 2px 4px 30px 0px #0000000d;
+  pointer-events: none;
+}
+
+.innerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.msgBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  height: 52px;
+  width: 52px;
+  border-radius: 100px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img {
+  height: 24px;
+  width: 24px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.text p {
+  color: #5d5d5d;
+}
+
+.errorText {
+  color: rgb(255, 0, 0);
+}
+
+.crossIcon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 590px) {
+  .toastContainer {
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    /* border-radius: 20px; */
+  }
+
+  .crossIcon {
+    width: 22px;
+    height: 22px;
+  }
+}

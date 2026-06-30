@@ -1,0 +1,122 @@
+.mainContainer {
+  padding: 150px 60px 60px 60px;
+  /* min-height: 100vh; */
+  min-width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContainer hr {
+  height: 1px;
+  color: #5d5d5d;
+  border: none;
+  /* border-color: white; */
+  background-color: #5d5d5d;
+}
+
+.secondaryContainer {
+  max-width: 71rem;
+  border-radius: 30px;
+  padding: 60px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: var(--text-flame-50);
+  border: 1px solid var(--text-flame-100);
+}
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pointsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.secondaryContainer p {
+  padding-left: 25px;
+}
+.pointsContainer ul {
+  padding-left: 30px;
+}
+
+.bottomPara {
+  padding-left: 0px !important;
+}
+
+.bottomPara a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.bottomPara a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #5d5d5d;
+}
+
+@media (max-width: 1024px) {
+  .mainContainer {
+    padding: 130px 40px 40px 40px;
+  }
+  .secondaryContainer {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 590px) {
+  .mainContainer {
+    padding: 130px 16px 16px 16px;
+  }
+  .secondaryContainer {
+    border-radius: 15px;
+    padding: 30px 15px;
+    gap: 20px;
+  }
+  .headingContainer h2 {
+    font-size: 30px;
+    line-height: 2rem;
+    /* 32px */
+    font-weight: 400;
+    letter-spacing: 0.4px;
+  }
+  .headingContainer p {
+    font-size: 13px;
+    /* 16px */
+    line-height: 18px;
+    /* 26px */
+    font-weight: 400;
+    letter-spacing: 0.32px;
+    padding-left: 10px;
+  }
+
+  .pointsContainer h4 {
+    font-size: 1rem;
+    /* 16px */
+    line-height: 1.5rem;
+    /* 24px */
+    font-weight: 500;
+    letter-spacing: 0.32px;
+  }
+  .pointsContainer p {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+    letter-spacing: 0.32px;
+    padding-left: 10px;
+  }
+  .bottomPara {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: 0.32px;
+    padding-left: 0px !important;
+  }
+}

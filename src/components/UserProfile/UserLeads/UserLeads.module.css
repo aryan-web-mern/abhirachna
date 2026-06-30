@@ -1,0 +1,55 @@
+.mainContainer {
+  padding: 9.375rem 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leadCardsContainer {
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1064px;
+  width: 100%;
+  gap: 1rem;
+}
+
+.addCard {
+  max-width: 344px;
+  width: 100%;
+  height: 162px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 1rem;
+  gap: 0.5rem;
+  cursor: pointer;
+  border: 0.0625rem solid var(--text-flame-100);
+}
+
+.plusIcon {
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 624.9375rem;
+  background-color: var(--text-flame-100);
+}
+
+@media (max-width: 1024px) {
+  .mainContainer {
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 590px) {
+  .mainContainer {
+    padding: 60px 16px;
+  }
+}

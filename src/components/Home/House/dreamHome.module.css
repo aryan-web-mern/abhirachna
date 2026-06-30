@@ -1,0 +1,394 @@
+.mainContainer {
+  padding: 150px 40px 0px;
+  overflow: hidden;
+  max-width: 90rem;
+  /* place-self: anchor-center; */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mainWrapper {
+  overflow: hidden;
+  padding: 30px;
+  width: 100%;
+}
+
+.heroSection {
+  display: grid;
+  grid-template-columns:
+    minmax(376px, 676px)
+    minmax(300px, 600px);
+  /* padding: 30px; */
+  gap: 1.5rem;
+  position: relative;
+}
+
+.contentLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.875rem;
+}
+.house {
+  position: absolute;
+  /* top: 0rem; */
+  right: 0;
+}
+.mainHeading {
+  /* color: #1f2730; */
+  /* line-height: 1.2; */
+  margin: 0;
+}
+
+.highlightText {
+  color: #e74c21;
+}
+
+.descText {
+  color: var(--text-black-600);
+  margin: 0;
+}
+
+.contentRight {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  position: relative;
+}
+
+.homeImg {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+.servicesSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.getEstimate {
+  background: linear-gradient(180deg, #ffffff 0%, #fef4ee 100%);
+  padding: 20px;
+  border-radius: 30px;
+  border: 1.008px solid var(--text-flame-100);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 112px;
+  width: 100%;
+  /* margin-right: 3.625rem; */
+  place-self: self-end;
+  /* position: absolute; */
+}
+
+.boxIcon {
+  position: absolute;
+  z-index: -1;
+  width: 120%;
+  /* bottom: 0; */
+}
+.boxIcon2 {
+  position: absolute;
+  z-index: -2;
+  width: 120%;
+  display: none;
+  bottom: 0;
+}
+
+.servicesGrid {
+  /* position: absolute; */
+  height: 240px;
+  width: 676px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.line {
+  height: 1px;
+  width: 100%;
+  border: 1px solid #fce6d899;
+  max-width: 506px;
+}
+.servicesGrid p {
+  max-width: 36.25rem;
+  padding: 0 10px;
+}
+.bottom {
+  display: grid;
+  grid-template-columns:
+    minmax(23.5rem, 42.25rem)
+    minmax(18.75rem, 37.5rem);
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.serviceTitle {
+  color: var(--text-black-100);
+  margin: 0;
+}
+
+.solutionText {
+  color: #e74c3c;
+}
+
+.serviceDesc {
+  /* font-size: 16px; */
+  color: var(--text-black-600);
+  /* line-height: 1.6; */
+  /* margin: 16px 0 0 0; */
+}
+
+.ctaSection {
+  display: flex;
+  justify-content: space-between;
+  width: 72%;
+}
+
+.estimateBtn {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(
+    to left,
+    var(--red-normal),
+    var(--text-flame-400)
+  );
+  border: 1.008px solid #fce6d8;
+  padding: 20px;
+  border-radius: 32px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.estimateBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 112, 67, 0.4);
+}
+
+.statsSection {
+  text-align: center;
+  gap: 10px;
+}
+
+.statNumber {
+  color: #e74c21;
+  margin: 0;
+}
+
+.statLabel {
+  color: var(--text-black-100);
+  /* margin: 4px 0 0 0; */
+}
+
+.mobileBreak {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobileBreak {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .boxIcon {
+    display: none;
+  }
+  .boxIcon2 {
+    display: block;
+  }
+  .house {
+    scale: 0.8;
+  }
+  /* .servicesGrid{
+    justify-content:flex-start;
+  } */
+}
+
+@media (max-width: 1024px) {
+  .getEstimate {
+    border: 0.77px solid #fce6d8;
+  }
+  .mainContainer {
+    padding: 80px 40px;
+  }
+  .servicesGrid {
+    width: 20.375rem;
+    gap: 0.5rem;
+  }
+  .heroSection {
+    align-items: center;
+    padding: 0;
+  }
+  .servicesSection {
+    justify-content: center;
+  }
+
+  .estimateBtn {
+    padding: 12px 44px;
+  }
+  .get {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+  }
+  .mainHeading,
+  .serviceTitle {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0.48px;
+  }
+
+  .descText {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    letter-spacing: 0.32px;
+  }
+  .servicesGrid p {
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    letter-spacing: 0.28px;
+  }
+  .statsSection h5,
+  .statsSection h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.32px;
+  }
+  /* .homeImg img {
+    width: 100%;
+    height: 100%;
+  } */
+
+  .servicesSection {
+    transform: translateX(0);
+  }
+
+  .boxIcon {
+    display: none;
+  }
+
+  .boxIcon2 {
+    display: block;
+    left: 0;
+  }
+  .getEstimate {
+    border-radius: 23.16px;
+    padding: 18.53px;
+    height: auto;
+  }
+  .servicesGrid {
+    justify-content: center;
+  }
+}
+@media (max-width: 940px) {
+  .servicesGrid,
+  .boxIcon2 {
+    display: none;
+  }
+  .heroSection {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .house {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    /* left: 0px; */
+    /* right: 0; */
+    /* max-width: 380px; */
+  }
+  .contentRight {
+    align-self: center;
+  }
+  .contentLeft {
+    text-align: center;
+  }
+  .bottom {
+    display: flex;
+  }
+  .servicesSection {
+    display: none;
+  }
+}
+@media screen and (max-width: 590px) {
+  .mainContainer {
+    padding: 60px 16px;
+  }
+  .mainHeading,
+  .serviceTitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+  }
+  .contentLeft {
+    gap: 12px;
+    padding: 0;
+    width: 278px;
+    place-self: center;
+  }
+  .heroSection {
+    gap: 40px;
+  }
+  .bottom {
+    margin-top: 40px;
+  }
+
+  .descText {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.24px;
+  }
+
+  .statsSection h5 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.28px;
+  }
+  .statsSection h3 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.36px;
+  }
+  .getEstimate {
+    border-radius: 30px;
+    padding: 12px;
+    height: auto;
+  }
+  .estimateBtn {
+    gap: 10px;
+    justify-content: center;
+    padding: 8px 34px;
+  }
+  .get {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.28px;
+  }
+  .hideOnMobile {
+    display: inline;
+  }
+}
+@media (max-width: 590px) {
+  .hideOnMobile {
+    display: none;
+  }
+}

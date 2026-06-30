@@ -1,0 +1,299 @@
+.mainContainer {
+  padding: 150px 40px 0px 40px;
+  background-color: var(--text-white-100);
+  display: flex;
+  justify-content: center;
+}
+
+.portfolioContainer {
+  /* place-self: center; */
+  width: 1360px;
+
+  height: 43.75rem; /* 700px */
+  border-radius: 1.875rem; /* 30px */
+  padding: 2.5rem 0rem 2.5rem 2.5rem; /* 40px */
+  background-color: var(--text-flame-50);
+  display: flex;
+  overflow: hidden;
+}
+
+.leftContainer {
+  width: 25.625rem;
+  /* 410px */
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  /*  20px */
+}
+
+.leftContainer p {
+  color: var(--text-black-600);
+}
+
+.rightContainer {
+  height: 630px;
+  width: 910px;
+  /* border: 1px solid black; */
+  /* background-color: black; */
+
+  display: flex;
+  flex-direction: column;
+  /* gap: 1.25rem; */
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.rightContainer::before {
+  content: "";
+  z-index: 10;
+  height: 100%;
+  width: 7.5rem;
+  position: absolute;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    #fef4ee,
+    #fef4ee 0%,
+    #fef4ee 0%,
+    transparent 100%
+  );
+  backdrop-filter: blur(0.04375rem);
+}
+
+.exploreBtn {
+  position: absolute;
+  right: 20px;
+  top: 45%;
+}
+
+.customBtn {
+  width: 4rem;
+  height: 2.625rem;
+  border-radius: 1.5rem;
+  outline: none;
+  cursor: pointer;
+  border: 0.375rem solid var(--text-flame-50);
+  background-color: var(--text-flame-400);
+  padding: 0.5625rem 1.25rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 8px;
+  transition: width 0.3s ease;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.customBtn img {
+  position: relative;
+  left: 5px;
+}
+
+.customBtn .btnText {
+  margin-right: -0.625rem;
+}
+
+.btntext {
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+  opacity: 0;
+  scale: 0.3;
+  color: black;
+  position: relative;
+  right: -20px;
+  transition: all 0.4s ease;
+  left: 5px;
+}
+
+.expanded {
+  width: 8.125rem;
+  /* 130px */
+}
+
+.expanded .btntext {
+  opacity: 1;
+  scale: 1;
+  right: 0.25rem;
+  /* ml: 4px */
+}
+
+@media screen and (max-width: 1440px) {
+  .portfolioContainer {
+    width: 100%;
+    height: 756px;
+    /* flex-direction: column; */
+    /* gap: 40px; */
+  }
+
+  .leftContainer {
+    width: 60%;
+  }
+
+  .rightContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .mainContainer {
+    padding: 80px 40px;
+    height: 1238px;
+  }
+
+  .portfolioContainer {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    justify-content: space-between;
+  }
+
+  .leftContainer {
+    text-align: center;
+    width: 100%;
+  }
+
+  .leftContainer h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.48px;
+  }
+
+  .leftContainer p {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    letter-spacing: 0.02rem;
+    text-align: center;
+  }
+
+  .rightContainer {
+    height: auto;
+  }
+
+  .exploreBtn {
+    display: none;
+  }
+
+  .showButton {
+    min-height: 42px;
+    display: flex !important;
+    align-items: center;
+    padding: 9px 20px;
+    background-color: var(--text-flame-400);
+    outline: none;
+    border: 1px solid var(--text-flame-50);
+    border-radius: 24px;
+    gap: 8px;
+    color: white;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+  }
+
+  .showButton svg {
+    color: white;
+  }
+
+  .rightContainer::before {
+    width: 5rem;
+  }
+
+  .rightContainer::after {
+    content: "";
+    z-index: 10;
+    height: 100%;
+    width: 5rem;
+    /* border: 1px solid; */
+    /* 120px */
+    position: absolute;
+    right: 0;
+    background: linear-gradient(
+      to left,
+      #fef4ee,
+      #fef4ee 0%,
+      #fef4ee 0%,
+      transparent 100%
+    );
+    backdrop-filter: blur(0.04375rem);
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .mainContainer {
+    padding: 60px 16px;
+    height: fit-content;
+  }
+
+  .galleryAllBtn {
+    display: none;
+  }
+
+  .customBtn {
+    /* display: none !important; */
+  }
+
+  .portfolioContainer {
+    width: 100%;
+    height: 830px;
+    /* height: 100%; */
+    border-radius: 16px;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 0; */
+    /* gap: 20px; */
+  }
+
+  .leftContainer {
+    text-align: center;
+    width: 278px;
+  }
+
+  .leftContainer h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+  }
+
+  .leftContainer p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.24px;
+  }
+
+  .exploreBtn {
+    display: flex;
+    right: 50%;
+    transform: translateX(50%);
+    top: 45%;
+  }
+
+  .showButton {
+    display: none !important;
+  }
+
+  .rightContainer {
+    left: 0rem;
+    top: 48px;
+    top: 38px;
+    gap: 12px;
+  }
+
+  .rightContainer::before {
+    width: 3rem;
+  }
+
+  .rightContainer::after {
+    width: 3rem;
+  }
+}

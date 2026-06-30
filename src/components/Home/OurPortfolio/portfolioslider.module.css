@@ -1,0 +1,45 @@
+.images {
+  height: 300px;
+  min-width: 400px;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 1023px) {
+  .images {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .images {
+    height: 118px;
+    min-width: 200px;
+    max-width: 200px;
+    /* border-radius: 4px; */
+  }
+}
+
+.image {
+  height: 290px;
+}
+
+.imgContainer {
+  display: flex;
+  gap: 16px;
+}
+
+@media screen and (max-width: 1023px) {
+  .image {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .imgContainer {
+    gap: 4px;
+  }
+
+  .image {
+    height: 118px;
+  }
+}

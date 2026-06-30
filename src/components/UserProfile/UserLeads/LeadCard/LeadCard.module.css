@@ -1,0 +1,158 @@
+.leadCard {
+  max-width: 344px;
+  width: 100%;
+  height: 162px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  gap: 0.75rem;
+  background-color: #f6f6f6;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.userDetails {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.leadStatus {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.leadStatus span {
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+}
+
+.leadStatus p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.24px;
+}
+
+.nameIcon {
+  width: 2.125rem;
+  height: 2.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 624.9375rem;
+  background-color: var(--blue-light);
+}
+
+.nameContact {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: fit-content;
+}
+
+.nameContact .name {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  letter-spacing: 0rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+.nameContact .contact {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  font-weight: 400;
+  color: #00000099;
+}
+
+.dotsIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dotsIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.leadDetails {
+  display: flex;
+  flex-direction: column;
+  max-width: 322px;
+  width: 100%;
+
+  gap: 8px;
+}
+
+.address,
+.estimate,
+.time {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: var(--text-white-60);
+  padding: 8px;
+  border-radius: 9999px;
+  width: 100%;
+}
+
+.imgIcon {
+  height: 1.375rem;
+  width: 1.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 624.9375rem;
+  overflow: hidden;
+}
+
+.priceTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.address span,
+.estimate span,
+.time span {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  font-weight: 400;
+  color: #000000e5;
+}
+
+.estimateButton {
+  padding: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  width: 100%;
+  /* max-width: 120px; */
+  /* height: 38px; */
+  background: linear-gradient(180deg, var(--text-flame-400), var(--red-normal));
+}

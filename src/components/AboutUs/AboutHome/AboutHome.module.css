@@ -1,0 +1,351 @@
+:global(body) {
+  overflow-x: hidden;
+}
+
+.mainContainer {
+  padding: 9.375rem 2.5rem 2.5rem 2.5rem;
+  overflow: hidden;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.home {
+  /* margin-top: 100px; 6.25rem */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.75rem 6.25rem; /* 60px 100px */
+  gap: 3.75rem; /* 60px */
+}
+
+.topText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem; /* 20px */
+}
+
+.topText h1 {
+  font-weight: 400;
+}
+
+.topText p {
+  max-width: 52.875rem; /* 846px */
+  color: var(--text-black-600);
+}
+
+.animationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* 30px */
+  border-radius: 1.875rem; /* 30px */
+}
+
+.infoCard {
+  height: 16.8125rem; /* 269px */
+  width: 23.5rem; /* 376px */
+  padding: 1.875rem; /* 30px */
+  border-radius: 1.875rem; /* 30px */
+  border: 1px solid var(--text-flame-100);
+  background: linear-gradient(180deg, #ffffff, #fef4ee 100%);
+}
+
+.tag {
+  width: 101%;
+  position: relative;
+  opacity: 60%;
+  font-weight: 600;
+  font-size: 2.5rem; /* 43px */
+  line-height: 3.375rem; /* 54px */
+  letter-spacing: 0.125rem; /* 2px */
+  margin-top: -0.625rem;
+  text-align: right;
+  margin-bottom: -0.625rem; /* -10px */
+  color: transparent;
+  background-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ec744b;
+  -webkit-mask-image: linear-gradient(to bottom, black 10%, transparent 95%);
+  mask-image: linear-gradient(to bottom, black 10%, transparent 95%);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem; /* 24px */
+}
+
+.info .title {
+  font-weight: 500;
+  font-size: 2rem; /* 32px */
+  line-height: 100%;
+  letter-spacing: 0;
+  margin: 0;
+  color: var(--red-normal);
+  text-align: start;
+}
+
+.info p {
+  color: var(--text-black-600);
+}
+
+.leftCards,
+.rightCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* 24px */
+}
+
+.centerCard {
+  height: 554px;
+  width: 376px; /* 23.5rem */
+  border-radius: 1.875rem; /* 30px */
+  border: 1px solid var(--text-flame-100);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.centerCard img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Tab Styles */
+@media (max-width: 1185px) {
+  .infoCard {
+    width: auto;
+    max-width: 23.5rem;
+  }
+}
+
+/* Tab Styles */
+@media (max-width: 1080px) {
+  .mainContainer {
+    margin-top: 150px;
+    padding: 80px 40px 80px 40px;
+    /* min-height: 100vh; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    gap: 100px;
+  }
+  .topText {
+    padding: 0 60px;
+  }
+
+  .topText h1 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 2rem; /* 32px */
+    letter-spacing: 0;
+  }
+
+  .topText p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.32px;
+  }
+
+  .animationContainer {
+    /* width: 100%; */
+    /* height: 100%; */
+  }
+  .tag {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 600;
+    letter-spacing: 2.88px;
+    -webkit-text-stroke-width: 1.33px;
+  }
+  .info .title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+
+  .info p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.28px;
+  }
+
+  .infoCard {
+    max-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px; /* 30px */
+    border-radius: 1rem; /* 30px */
+  }
+
+  .leftCards,
+  .rightCards {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .centerCard {
+    pointer-events: none;
+    min-width: 240px;
+    min-height: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .mainContainer {
+    margin-top: 60px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 870px) {
+  .mainContainer {
+    margin-top: 60px;
+    width: 100%;
+  }
+  .home {
+    height: 100%;
+    padding: 0;
+    gap: 100px; /* 40px */
+  }
+  .topText {
+    padding: 0 60px; /* 40px */
+  }
+
+  .animationContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+  .leftCards,
+  .rightCards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* 1.5rem */
+    width: 100%;
+    height: fit-content;
+  }
+
+  .infoCard {
+    width: 100%;
+    height: 100%;
+    padding: 20px; /* 30px */
+    border-radius: 20px; /* 30px */
+  }
+
+  .centerCard {
+    width: 100%;
+    height: 300px;
+    /* border: 0.0625rem solid black; */
+    /* aspect-ratio: 3/2; */
+    overflow: hidden;
+  }
+
+  .centerCard img {
+    object-position: top;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 590px) {
+  .mainContainer {
+    margin-top: 60px;
+    padding: 60px 16px 0px 16px;
+  }
+  .home {
+    gap: 40px;
+  }
+  .topText {
+    padding: 0 40px; /* 40px */
+    gap: 12px;
+  }
+  .topText h1 {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 500;
+    line-height: 2rem; /* 32px */
+    letter-spacing: 0.025rem; /* 0.4px */
+  }
+  .topText p {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: 0.015rem;
+  }
+  .animationContainer {
+    gap: 12px;
+  }
+
+  .tag {
+    display: none;
+  }
+
+  .info .title {
+    font-weight: 500;
+    font-size: 1.25rem; /* 20px */
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+
+  .tag {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 600;
+    letter-spacing: 2.88px;
+    -webkit-text-stroke-width: 1.33px;
+  }
+  .info .title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+
+  .info p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.28px;
+  }
+
+  .info p {
+    display: none;
+  }
+
+  .leftCards,
+  .rightCards {
+    display: flex;
+    gap: 0.75rem; /* .75rem */
+  }
+
+  .centerCard {
+    width: 100%;
+    min-height: 13.3125rem;
+    border: 0.0625rem solid black;
+    /* aspect-ratio: 3/2; */
+    overflow: hidden;
+  }
+  .infoCard {
+    border: 1px solid var(--text-flame-100);
+    padding: 16px;
+    border-radius: 16px;
+  }
+}

@@ -1,0 +1,129 @@
+.mainContainer {
+  padding: 150px 40px 0px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  /* place-self: center; */
+  height: 48.75rem; /* 780px */
+  width: 85rem; /* 1360px  */
+  background-color: var(--text-flame-50);
+  border-radius: 2rem; /* 32px */
+  padding: 2.5rem; /* 40px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftContainer {
+  width: 25.625rem; /* 410px */
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
+}
+
+.leftContainer h3 {
+  letter-spacing: 0;
+}
+.leftContainer h3 span {
+  color: var(--red-normal);
+}
+
+.leftContainer p {
+  color: var(--text-black-600);
+}
+
+.rightContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 3.75rem; /* 60px */
+  column-gap: 1.25rem; /* 1.25 */
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    width: 100%;
+    border-radius: 1.875rem;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .mainContainer {
+    height: 1238px;
+    padding: 80px 40px;
+  }
+
+  .container {
+    flex-direction: column;
+    height: fit-content;
+    gap: 80px;
+  }
+
+  .leftContainer {
+    width: 100%;
+    text-align: center;
+  }
+
+  .leftContainer h3 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.48px;
+  }
+
+  .leftContainer p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.32px;
+  }
+
+  .rightContainer {
+    row-gap: 20px;
+    column-gap: 20px;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .mainContainer {
+    padding: 60px 16px 0px 16px;
+    height: fit-content;
+    /* min-height: 100vh; */
+  }
+
+  .container {
+    /* flex-direction: column; */
+    text-align: center;
+    padding: 40px 12px;
+    border-radius: 16px;
+    height: 100%;
+    gap: 40px;
+    /* height: 756px; */
+    /* height: fit-content; */
+  }
+
+  .leftContainer {
+    width: 278px;
+  }
+
+  .leftContainer h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  .leftContainer p {
+    display: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .rightContainer {
+    row-gap: 16px;
+    column-gap: 16px;
+  }
+}

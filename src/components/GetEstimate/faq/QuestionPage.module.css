@@ -1,0 +1,93 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* max-width: 522px; */
+  /* padding: 20px; */
+  max-height: 400px;
+  /* overflow-y: scroll; */
+  scrollbar-width: none;
+}
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.outer {
+  width: 100%;
+  /* min-width: 522px; */
+  background: #fff;
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 32.625rem !important;
+}
+
+@media (max-width:1024px) {
+  .outer h4 {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width:1024px) {
+  .outer h4 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+}
+
+
+/* @media (max-width: 600px) { 
+   .outer{
+    width: 300px !important; 
+  }
+
+ 
+} */
+
+
+.setViewfalse {
+  display: none !important;
+}
+
+.setViewtrue {
+  display: flex;
+}
+
+.setPosition {
+  position: relative;
+}
+
+/* .forZero{
+  max-width: 522px;
+} */
+
+.QuesHead {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.QuesHead {
+  color: var(--text-black-100);
+}
+
+.optionsLabel {
+  color: var(--text-black-100);
+
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+  }
+}

@@ -1,0 +1,140 @@
+.testimonialsHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem;
+  gap: 5rem;
+}
+
+.mainText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+.mainText h1 {
+  font-weight: 400;
+}
+
+.mainText p {
+  color: var(--text-black-600);
+}
+
+.mainCard {
+  max-width: 80rem;
+  height: 21.375rem;
+  padding: 2.5rem;
+  border-radius: 1.875rem;
+  border: 1px solid var(--text-flame-100);
+  background: linear-gradient(
+    180deg,
+    var(--text-white-100),
+    var(--text-flame-50) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.tag {
+  position: relative;
+  opacity: 0.5;
+  font-weight: 700;
+  font-size: 2.6875rem;
+  line-height: 3.375rem;
+  letter-spacing: 0.125rem;
+  text-align: right;
+  top: 0;
+  right: 1.25rem;
+  margin-bottom: -0.625rem;
+  color: transparent;
+  background-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--red-normal);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    var(--text-black-100) 10%,
+    transparent 95%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    var(--text-black-100) 10%,
+    transparent 95%
+  );
+}
+
+.title {
+  margin: 0;
+  color: var(--red-normal);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.cardPara {
+  line-height: 1.5rem;
+  color: var(--text-black-600);
+  width: 75%;
+}
+
+.cardBottomRight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.avatarRatings {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+
+.avatarStack {
+  display: flex;
+}
+
+.avatarStack img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 0.125rem solid var(--text-white-100);
+}
+
+.secondary {
+  margin-left: -1rem;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ratingText {
+  color: var(--text-black-600);
+  margin-top: -0.625rem;
+}
+
+.buttonText {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  line-height: 24px;
+}
+
+.star {
+  width: auto;
+  height: auto;
+}

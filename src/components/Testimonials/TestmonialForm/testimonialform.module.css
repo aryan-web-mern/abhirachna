@@ -1,0 +1,260 @@
+.mainContainer {
+  padding: 150px 40px 40px 40px;
+  /* height: 801px; */
+  display: flex;
+  justify-content: center;
+  /* width: 1440px; */
+}
+
+.container {
+  /* place-self: center; */
+  /* margin-bottom: 150px; */
+  width: 85rem;
+  width: 80rem !important;
+  height: 42.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  /* gap: 50px; */
+  scroll-behavior: smooth;
+}
+
+.testmonialFormContainer {
+  width: 80rem;
+  min-height: 42.875rem; /* 686px */
+  border-radius: 1.875rem; /* 30px */
+  padding: 2.5rem; /* 40px */
+  background-color: var(--text-flame-50);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.testmonialLeftContainer {
+  /* height: 100%; */
+  width: 25.625rem; /* 410px */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testmonialHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
+}
+
+.testmonialFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
+}
+
+.testmonialFooter div {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* 20px */
+  color: var(--text-black-600);
+}
+
+.testmonialFooter label a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-black-600);
+}
+
+.testmonialHeader p {
+  color: var(--text-black-600);
+}
+
+.testmonialRight {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  /* border: 1px solid; */
+}
+
+.testmonialRightContainer {
+  width: 39.625rem; /* 634px */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testmonialRightContainer .testimonialBtnContainer {
+  width: 100%;
+  height: 100%;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  margin-top: 13px;
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    width: 80rem;
+  }
+
+  .testmonialFormContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .container {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 1229px) {
+  .mainContainer {
+    margin-bottom: 100px;
+  }
+
+  .testmonialRightContainer {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .mainContainer {
+    padding: 80px 40px;
+    margin-bottom: 0;
+    /* border: 1px solid; */
+    height: 1046px;
+    height: 1110px;
+    /* height: fit-content; */
+  }
+
+  .container {
+    width: 100%;
+    /* overflow-y: scroll; */
+    height: 100%;
+    height: 950px;
+  }
+
+  .testmonialLeftContainer {
+    width: 100%;
+    text-align: center;
+  }
+  .testmonialRightContainer {
+    width: 100%;
+  }
+
+  .testmonialFormContainer {
+    min-height: 100%;
+    /* min-height: 954px; */
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .testmonialRight {
+    gap: 35px;
+    height: 100%;
+  }
+
+  .testmonialHeader {
+    padding: 0px 60px;
+  }
+
+  .testmonialHeader h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+  }
+
+  .testmonialHeader p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 2%;
+  }
+
+  .testmonialFooter {
+    display: none;
+  }
+
+  .testmonialRight {
+    height: 100%;
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .testmonialFormContainer {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .mainContainer {
+    padding: 3.75rem 1rem 0rem 1rem;
+    height: fit-content;
+  }
+
+  .container {
+    width: 100%;
+    height: 859px;
+    margin: 0;
+    /* height: fit-content; */
+  }
+
+  .testmonialFormContainer {
+    min-height: 859px;
+    width: 100%;
+    flex-direction: column;
+    padding: 2.5rem 0.75rem;
+    border-radius: 1rem;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .testmonialLeftContainer {
+    width: 278px;
+    text-align: center;
+  }
+
+  .testmonialHeader {
+    padding: 0;
+    gap: 12px;
+  }
+
+  .testmonialHeader h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.4px;
+  }
+
+  .testmonialHeader p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.24px;
+  }
+
+  .testmonialFooter {
+    display: none;
+  }
+
+  .testmonialRight {
+    height: 100%;
+  }
+
+  .testmonialRightContainer {
+    width: 100%;
+    gap: 1.25rem;
+  }
+
+  .testmonialRight {
+    gap: 20px;
+    width: 100%;
+  }
+}
