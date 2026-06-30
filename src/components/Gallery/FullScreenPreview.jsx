@@ -4,7 +4,7 @@ import share from "../../assets/icons/Share.svg";
 import save from "../../assets/gallery/Save.svg";
 import saved from "../../assets/gallery/Saved.svg";
 import back from "../../assets/gallery/back1.svg";
-import { setAwsImageURL } from "../../utils/functions";
+import { getMediaUrl } from "../../utils/functions";
 import { useToast } from "../../hooks/hooks";
 const FullScreenPreview = ({ image, onClose, onSave }) => {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
@@ -45,7 +45,7 @@ const FullScreenPreview = ({ image, onClose, onSave }) => {
           <img src={back} alt="back" />
         </button>
         <img
-          src={setAwsImageURL(image?.imageKey)}
+          src={getMediaUrl(image?.imageKey)}
           alt={image?._id}
           className={styles.fullScreenImage}
           onClick={() => setIsOverlayVisible(!isOverlayVisible)}

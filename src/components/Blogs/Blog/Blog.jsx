@@ -19,8 +19,7 @@ import {
 import { getErrorMessage } from "../../../utils/errorHandler";
 import moment from "moment";
 import { useAuth } from "../../../AuthProvider/AuthContext";
-
-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+import { getMediaUrl } from "../../../utils/functions";
 
 export const BlogPage = () => {
   const navigate = useNavigate();
@@ -161,7 +160,7 @@ export const BlogPage = () => {
                 <div className={styles.mainImageContainer}>
                   <img
                     className={styles.minimalimg}
-                    src={`${apiBaseUrl}/s3/getimage?key=${blogData?.image}`}
+                    src={getMediaUrl(blogData?.image)}
                     alt="Minimalist living space"
                   />
                 </div>

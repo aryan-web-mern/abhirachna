@@ -4,10 +4,9 @@ import video1 from "../../../assets/video1.mp4";
 import Styles from "./testimonials.module.css";
 import { TestimonialGridContent } from "../../../utils/constantData";
 import { fetchTestimonialsData } from "../../../services/testimonials";
-import { testimonialsGridChunk } from "../../../utils/functions";
+import { testimonialsGridChunk, getMediaUrl } from "../../../utils/functions";
 import { getErrorMessage } from "../../../utils/errorHandler";
 import FullScreenTestimonial from "./FullScreenTestiminial";
-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 import FullScreenTestiminial from "./FullScreenTestiminial";
 import { useToast } from "../../../hooks/hooks";
 
@@ -98,9 +97,9 @@ const TestimonialsPage = () => {
                         BoxNumber={BoxNumber++}
                         src={
                           item?.video
-                            ? `${apiBaseUrl}/s3/getimage?key=${item.video}`
+                            ? getMediaUrl(item.video)
                             : item?.image
-                            ? `${apiBaseUrl}/s3/getimage?key=${item.image}`
+                            ? getMediaUrl(item.image)
                             : ""
                         }
                         onFullScreen={setFullScreenItem}
@@ -126,9 +125,9 @@ const TestimonialsPage = () => {
                       BoxNumber={BoxNumber++}
                       src={
                         item?.video
-                          ? `${apiBaseUrl}/s3/getimage?key=${item.video}`
+                          ? getMediaUrl(item.video)
                           : item?.image
-                          ? `${apiBaseUrl}/s3/getimage?key=${item.image}`
+                          ? getMediaUrl(item.image)
                           : ""
                       }
                       onFullScreen={setFullScreenItem}
@@ -153,9 +152,9 @@ const TestimonialsPage = () => {
                       BoxNumber={BoxNumber++}
                       src={
                         item?.video
-                          ? `${apiBaseUrl}/s3/getimage?key=${item.video}`
+                          ? getMediaUrl(item.video)
                           : item?.image
-                          ? `${apiBaseUrl}/s3/getimage?key=${item.image}`
+                          ? getMediaUrl(item.image)
                           : ""
                       }
                       onFullScreen={setFullScreenItem}

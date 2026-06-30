@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { likeBlog, saveBlog } from "../../../services/blogsService";
 import moment from "moment";
 import { useAuth } from "../../../AuthProvider/AuthContext";
-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+import { getMediaUrl } from "../../../utils/functions";
 
 function BlogCard({
   data = [],
@@ -144,7 +144,7 @@ function BlogCard({
         </div>
         <div className={BlogCardStyle?.image}>
           <img
-            src={`${apiBaseUrl}/s3/getimage?key=${data?.image}`}
+            src={getMediaUrl(data?.image)}
             alt="blogImage"
           />
         </div>

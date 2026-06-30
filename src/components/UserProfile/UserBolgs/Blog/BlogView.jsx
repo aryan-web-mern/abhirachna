@@ -14,8 +14,7 @@ import saved from "../../../../assets/blogCardSvgs/saved.png";
 import ProfileNavbar from "../../ProfileNavbar/ProfileNavbar";
 import moment from "moment";
 import { getErrorMessage } from "../../../../utils/errorHandler";
-
-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+import { getMediaUrl } from "../../../../utils/functions";
 
 const BlogView = () => {
   const navigate = useNavigate();
@@ -139,7 +138,7 @@ const BlogView = () => {
                 <div className={styles.mainImageContainer}>
                   <img
                     className={styles.minimalimg}
-                    src={`${apiBaseUrl}/s3/getimage?key=${blogData?.image}`}
+                    src={getMediaUrl(blogData?.image)}
                     alt="Minimalist living space"
                   />
                 </div>

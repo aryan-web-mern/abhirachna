@@ -9,7 +9,7 @@ import {
   getAllSavedGallery,
   saveGalleryImage,
 } from "../../../services/galleryService";
-import { setAwsImageURL } from "../../../utils/functions";
+import { getMediaUrl } from "../../../utils/functions";
 import { getErrorMessage } from "../../../utils/errorHandler";
 import ProfileNavbar from "../ProfileNavbar/ProfileNavbar";
 import { useAuth } from "../../../AuthProvider/AuthContext";
@@ -127,7 +127,7 @@ const UserGallery = () => {
             {galleryImages?.map((d, i) => (
               <ImageCard
                 key={i}
-                src={setAwsImageURL(d?.imageKey)}
+                src={getMediaUrl(d?.imageKey)}
                 alt={d._id}
                 description={d.description}
                 isSaved={d?.isSaved}

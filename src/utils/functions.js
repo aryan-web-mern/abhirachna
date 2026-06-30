@@ -1,9 +1,11 @@
-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
-const bucketUrl = import.meta.env.VITE_BUCKET_URL;
-
-export const showImageUrl = (image) => {
-  return `${bucketUrl}?key=${image}`;
+export const getMediaUrl = (url) => {
+  if (!url || typeof url !== "string") return "";
+  return url.trim();
 };
+
+export const showImageUrl = getMediaUrl;
+
+export const setAwsImageURL = getMediaUrl;
 
 export function testimonialsGridChunk(data) {
   const chunkPattern = [6, 2, 6];
@@ -28,10 +30,6 @@ export function testimonialsGridChunk(data) {
     newArr.push(result.slice(i, i + 3));
   }
   return newArr;
-}
-
-export function setAwsImageURL(url) {
-  return `${apiBaseUrl}/s3/getimage?key=${url}`;
 }
 
 export const handleKeyPress = (event) => {

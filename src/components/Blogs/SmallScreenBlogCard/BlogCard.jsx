@@ -8,8 +8,7 @@ import liked from "../../../assets/blogCardSvgs/liked.png";
 import saved from "../../../assets/blogCardSvgs/saved.png";
 import moment from "moment";
 import { useAuth } from "../../../AuthProvider/AuthContext";
-
-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+import { getMediaUrl } from "../../../utils/functions";
 
 const SmallBlogCard = ({
   data = [],
@@ -79,7 +78,7 @@ const SmallBlogCard = ({
     >
       <div className={styles?.image}>
         <img
-          src={`${apiBaseUrl}/s3/getimage?key=${data?.image}`}
+          src={getMediaUrl(data?.image)}
           alt="blogImage"
         />
       </div>

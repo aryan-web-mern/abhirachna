@@ -16,7 +16,7 @@ import {
   fetchLeadLinks,
 } from "../../../services/profileService";
 import { getErrorMessage } from "../../../utils/errorHandler";
-import { showImageUrl } from "../../../utils/functions";
+import { getMediaUrl } from "../../../utils/functions";
 
 const UploadedFiles = () => {
   const [selected, setSelected] = useState(null);
@@ -121,11 +121,11 @@ const UploadedFiles = () => {
   };
 
   function handleShowImage(url) {
-    window.open(showImageUrl(url, "_blank"));
+    window.open(getMediaUrl(url), "_blank");
   }
 
   function handleShowDoc(url) {
-    window.open(showImageUrl(url, "_blank"));
+    window.open(getMediaUrl(url), "_blank");
   }
 
   return (
