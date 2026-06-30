@@ -41,33 +41,30 @@ function Question({
   designAns,
   currentQuesIndex,
   id,
+  category,
   handleNext,
+  lastDesignQuesIndex,
 }) {
   const [elementId, setElementId] = useState("");
 
-  function handleChange(id, cat, label) {
+  function handleChange(optionId, cat, label) {
+    const answerKey = cat || category;
     setDesignQues((p) => {
-      const alreadyExist = p.some((i) => cat in i);
+      const alreadyExist = p.some((i) => answerKey in i);
       if (!alreadyExist) {
-        return [...p, { [cat]: { id, label } }];
-      } else {
-        const withUpdatedValue = p?.map((i) => {
-          if (cat in i) {
-            return { [cat]: { label, id } };
-          }
-          return i;
-        });
-        return withUpdatedValue;
+        return [...p, { [answerKey]: { _id: optionId, id: optionId, label } }];
       }
+      return p.map((i) =>
+        answerKey in i ? { [answerKey]: { _id: optionId, id: optionId, label } } : i
+      );
     });
   }
-
-  console.log(options);
 
   const isIdPresent = (targetId) =>
     designAns.some((item) => {
       const key = Object.keys(item)[0];
-      return item[key].id === targetId;
+      const selected = item[key];
+      return selected?._id === targetId || selected?.id === targetId;
     });
 
   return (
@@ -81,13 +78,14 @@ function Question({
                   <input
                     id={`option-${type._id}`}
                     onClick={
-                      currentQuesIndex < 12
+                      currentQuesIndex < lastDesignQuesIndex
                         ? () => setTimeout(() => handleNext(), 200)
                         : null
                     }
                     onKeyDown={(e) => blockKeys(e)}
                     type="radio"
-                    name="foo"
+                    name={`question-${id}`}
+                    checked={isIdPresent(type?._id)}
                     disabled={currentQuesIndex === id ? false : true}
                     style={
                       currentQuesIndex === id

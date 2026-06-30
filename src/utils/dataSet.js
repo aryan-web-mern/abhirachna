@@ -160,16 +160,3 @@ export const SalaryLocDataSet = [
   { key: "jobLocation", label: "Location", icon: "📍" },
   { key: "salary", label: "Salary", icon: "💰" },
 ];
-
-export const getEstQueSerial = [
-  "Flooring Work",
-  "Wall Tiles Work",
-  "Door & Windows",
-  "False Ceiling Work",
-  "Electrical Work",
-  "Wooden Work",
-  "Wall Treatments",
-  "Paint Work",
-  "Plumbing & Sanitory Work",
-  "Decore / Curtains",
-];

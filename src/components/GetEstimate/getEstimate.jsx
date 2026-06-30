@@ -16,6 +16,10 @@ import CustomizeDetails from "./subComponent1/CustomizeDetails/CustomizeDetails"
 import SpaceArea from "./subComponent1/SpaceArea/SpaceArea";
 import { getEstimateQues, sendEstimate } from "../../services/estimateService";
 import { getErrorMessage } from "../../utils/errorHandler";
+import {
+  getSelectedDesignOptionIds,
+  parseDesignOptionsResponse,
+} from "../../utils/estimateDesignOptions";
 import InteriorEstimate from "./InteriorEstimate/InteriorEstimate";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../AuthProvider/AuthContext";
@@ -35,12 +39,15 @@ function GetEstimate() {
   const [selectedAreaType, setSelectedAreaType] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [getEstimateQue, setGetEstimateQue] = useState([]);
+  const [designCategories, setDesignCategories] = useState([]);
+  const [designOptionsByCategory, setDesignOptionsByCategory] = useState({});
   let highestZIndex = useRef(10);
   const timeoutId = useRef(null);
   const { authUser, setShowModel } = useAuth();
 
   const toast = useToast();
+
+  const lastDesignQuesIndex = 2 + designCategories.length;
 
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -102,13 +109,17 @@ function GetEstimate() {
         zIndex: allCards.length - index,
       });
     });
-  }, [getEstimateQue]);
+  }, [designCategories]);
 
   async function setQuestions() {
     setLoading(true);
     try {
       const data = await getEstimateQues();
-      setGetEstimateQue(data?.data);
+      const { categories, optionsByCategory } = parseDesignOptionsResponse(
+        data?.data
+      );
+      setDesignCategories(categories);
+      setDesignOptionsByCategory(optionsByCategory);
     } catch (err) {
       setError(getErrorMessage(err));
     } finally {
@@ -117,9 +128,7 @@ function GetEstimate() {
   }
 
   useEffect(() => {
-    setTimeout(() => {
-      setQuestions();
-    }, 1000);
+    setQuestions();
   }, []);
 
   const handleEnterAction = useCallback(() => {
@@ -140,7 +149,7 @@ function GetEstimate() {
     } else {
       handleNext();
     }
-  }, [currentQuesIndex, handleNext]);
+  }, [activePage, currentQuesIndex, designAns.length, handleNext]);
 
   // enter pe next chlana tha isliye
   useEffect(() => {
@@ -330,15 +339,15 @@ function GetEstimate() {
   async function sendEstimateForm(data) {
     setLoading(true);
     try {
-      if (designAns.length === 0) {
+      if (designAns.length < designCategories.length) {
         toast.error("Please Provide all information", "");
         return;
       }
-      let setpayload = {
+      const setpayload = {
         name: formData.name,
         mobile: formData.phoneNumber,
         address: formData.message,
-        selectedDesignOptions: designAns.map((i) => Object.values(i)[0].id),
+        selectedDesignOptions: getSelectedDesignOptionIds(designAns),
         leadtype: "customer",
         AreaDetails: answers.find((i) => i.ques_id == 1).ans,
         squareFeetRange: answers.find((i) => i.ques_id === 2)?.ans,
@@ -496,7 +505,8 @@ function GetEstimate() {
                 >
                   <p className={styles.ButtonText}>
                     <span className={styles.texthidemobile}>
-                      {currentQuesIndex === 12 && designAns.length === 10
+                      {currentQuesIndex === lastDesignQuesIndex &&
+                      designAns.length === designCategories.length
                         ? "Submit"
                         : "Next"}
                     </span>{" "}
@@ -579,10 +589,11 @@ function GetEstimate() {
                   ref={QuesRefs}
                   setDesignQues={setDesignQues}
                   currentQuesIndex={currentQuesIndex}
-                  getEstimateQue={getEstimateQue}
+                  designCategories={designCategories}
+                  designOptionsByCategory={designOptionsByCategory}
                   designAns={designAns}
                   handleNext={handleNext}
-                  setFormVisible={setFormVisible}
+                  lastDesignQuesIndex={lastDesignQuesIndex}
                 />
               </div>
             </div>
