@@ -30,7 +30,7 @@ function QuestionPage({
         currentQuesIndex > 2 ? Styles.setViewtrue : Styles.setViewfalse
       }`}
     >
-      {getEstQueSerial.map((key, i) => {
+      {/* {getEstQueSerial.map((key, i) => {
         return (
           <React.Fragment key={i}>
             <div
@@ -50,7 +50,7 @@ function QuestionPage({
             </div>
           </React.Fragment>
         );
-      })}
+      })} */}
     </div>
   );
 }
